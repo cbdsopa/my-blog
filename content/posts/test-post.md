@@ -4,7 +4,7 @@ draft = false
 title = 'Test Post'
 +++
 
-$$a / b = \frac{a}{b}$
+$$a / b = \frac{a}{b}$$
 
 你好？
 
