@@ -4,6 +4,8 @@ draft = false
 title = 'Test Post'
 +++
 
+本页面用于测试功能。
+
 $$a / b = \frac{a}{b}$$
 
 你好？
