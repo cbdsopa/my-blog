@@ -120,5 +120,10 @@ body {
 
 .post-content {
     font-size: 16px !important; /* PaperMod 默认通常是 16px，这里调小到 15px */
-    line-height: 1 !important; /* 顺便微调行高，确保字变小后依然通透易读 */
+    line-height: 1.7 !important; /* 数字越大行间距越宽松，默认一般是 1.6~1.7 */
+}
+
+/* 如果你还想顺便调一下段落与段落之间的距离（段间距） */
+.post-content p {
+    margin-bottom: 1em !important; /* 默认通常是 1em，可以根据喜好改成 1.4em 或 1.5em */
 }
