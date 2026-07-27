@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>测试 on cbdsopa&#39;s blog</title>
+    <link>http://localhost:1313/my-blog/tags/%E6%B5%8B%E8%AF%95/</link>
+    <description>Recent content in 测试 on cbdsopa&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 Jul 2026 14:46:04 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/my-blog/tags/%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test Post</title>
+      <link>http://localhost:1313/my-blog/posts/test-post/</link>
+      <pubDate>Mon, 27 Jul 2026 14:46:04 +0800</pubDate>
+      <guid>http://localhost:1313/my-blog/posts/test-post/</guid>
+      <description>&lt;p&gt;本页面用于测试功能。&lt;/p&gt;
+&lt;p&gt;$$a / b = \frac{a}{b}$$&lt;/p&gt;
+&lt;p&gt;你好？&lt;/p&gt;
+&lt;p&gt;时间复杂度为 $\mathcal{O}(V + E)$ 或者是用欧拉-麦克劳林公式推导。&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;test图片&#34; loading=&#34;lazy&#34; src=&#34;https://cdn.luogu.com.cn/upload/image_hosting/4epse4bs.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.cnblogs.com/cbdsopa&#34;&gt;旧博客链接&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
