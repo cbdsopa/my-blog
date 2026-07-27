@@ -1,5 +1,5 @@
 /* ========================================= */
-/* 1. 独立变量库：精准适配 PaperMod 的 data-theme 属性 */
+/* 独立变量库：精准适配 PaperMod 的 data-theme 属性 */
 /* ========================================= */
 :root {
     /* --- ☀️ 默认（浅色模式）--- */
@@ -28,7 +28,7 @@ body {
 }
 
 /* ========================================= */
-/* 2. 静态卡片 (文章详情页)                 */
+/* 静态卡片 (文章详情页)                 */
 /* ========================================= */
 .post-single {
     background: var(--card-bg) !important;
@@ -40,7 +40,7 @@ body {
 }
 
 /* ========================================= */
-/* 3. 动态卡片 (首页文章列表，带 0.25s 极速跟手动画) */
+/* 动态卡片 (首页文章列表，带 0.25s 极速跟手动画) */
 /* ========================================= */
 .post-entry,
 .first-entry {
@@ -65,7 +65,7 @@ body {
 }
 
 /* ========================================= */
-/* 4. 顶部导航菜单微动效                      */
+/* 顶部导航菜单微动效                      */
 /* ========================================= */
 #menu li a {
     border-radius: 8px !important;
@@ -76,4 +76,24 @@ body {
 #menu li a:hover {
     transform: translateY(-2px) !important;
     background: rgba(128, 128, 128, 0.15) !important; 
+}
+
+/* ========================================= */
+/* 分类与标签小项的悬停微动效               */
+/* ========================================= */
+
+/* 精准匹配 PaperMod 的 .terms-tags 或者是文章底部的标签 */
+.terms-tags li a {
+    display: inline-block !important;
+    border-radius: 6px !important;
+    padding: 2px 8px !important;
+    transition: transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                background-color 0.25s ease, 
+                box-shadow 0.25s ease !important;
+}
+
+/* 悬浮时：轻微上浮 2px，带有柔和的背景反馈 */
+.terms-tags li a:hover {
+    transform: translateY(-2px) !important;
+    background: rgba(128, 128, 128, 0.15) !important;
 }
