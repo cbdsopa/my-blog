@@ -2,3 +2,5 @@ baseURL = "https://cbdsopa.github.io/my-blog/"
 locale = 'en-us'
 title = "cbdsopa's blog"
 theme = "PaperMod"
+[params]
+  comments = true
