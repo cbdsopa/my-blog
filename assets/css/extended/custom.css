@@ -105,11 +105,20 @@ body {
 
 /* 扩大主容器的默认最大宽度（原版通常较窄，这里调到 900px，你可以按需改成 950px 或 1000px） */
 .main {
-    max-width: 1200px !important; 
+    max-width: 950px !important; 
 }
 
 /* 确保文章详情页本体和主容器同宽，并适当增加左右内边距，让视觉更舒展 */
 .post-single {
     max-width: 100% !important;
     padding: 50px 60px !important; /* 上下 50px，左右 60px，显得更大气 */
+}
+
+/* ========================================= */
+/* 7. 调整文章正文（稿纸内）的字体大小          */
+/* ========================================= */
+
+.post-content {
+    font-size: 16px !important; /* PaperMod 默认通常是 16px，这里调小到 15px */
+    line-height: 1 !important; /* 顺便微调行高，确保字变小后依然通透易读 */
 }
