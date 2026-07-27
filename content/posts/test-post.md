@@ -2,6 +2,7 @@
 date = '2026-07-27T14:46:04+08:00'
 draft = false
 title = 'Test Post'
+categories = ["测试"]
 +++
 
 本页面用于测试功能。
