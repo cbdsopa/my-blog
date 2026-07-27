@@ -1,10 +1,10 @@
 +++
 date = '2026-07-27T14:46:04+08:00'
 draft = false
-title = 'My First Post'
+title = 'Test Post'
 +++
 
-$$a / b = \frac{a}{b}$$
+$$a / b = \frac{a}{b}$
 
 你好？
 

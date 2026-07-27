@@ -9,11 +9,11 @@
     <lastBuildDate>Mon, 27 Jul 2026 14:46:04 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/my-blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My First Post</title>
-      <link>http://localhost:1313/my-blog/posts/my-first-post/</link>
+      <title>Test Post</title>
+      <link>http://localhost:1313/my-blog/posts/test-post/</link>
       <pubDate>Mon, 27 Jul 2026 14:46:04 +0800</pubDate>
-      <guid>http://localhost:1313/my-blog/posts/my-first-post/</guid>
-      <description>&lt;p&gt;$$a / b = \frac{a}{b}$$&lt;/p&gt;
+      <guid>http://localhost:1313/my-blog/posts/test-post/</guid>
+      <description>&lt;p&gt;$$a / b = \frac{a}{b}$&lt;/p&gt;
 &lt;p&gt;你好？&lt;/p&gt;
 &lt;p&gt;时间复杂度为 $\mathcal{O}(V + E)$ 或者是用欧拉-麦克劳林公式推导。&lt;/p&gt;</description>
     </item>
