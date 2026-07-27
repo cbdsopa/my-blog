@@ -4,3 +4,14 @@ title = "cbdsopa's blog"
 theme = "PaperMod"
 [params]
   comments = true
+
+[menu]
+  [[menu.main]]
+    name = "分类"        # 按钮显示的文字
+    url = "/categories/" # 指向 Hugo 自动生成的分类归档路径
+    weight = 10          # 决定按钮的排序，数字越小越靠前
+
+  [[menu.main]]
+    name = "标签"
+    url = "/tags/"
+    weight = 20
