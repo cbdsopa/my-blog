@@ -330,3 +330,138 @@ body {
     background: rgba(255, 255, 255, 0.2) !important;
     transform: translateY(-1px) !important;
 }
+
+/* ========================================= */
+/* 侧边目录 (Sidebar TOC)                      */
+/* ========================================= */
+
+/* 单文章页面加宽主容器以容纳侧边栏 */
+body:not(.list) .main {
+    max-width: 1250px !important;
+}
+
+/* Flex 布局包裹侧边栏和文章 */
+.post-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+}
+
+/* 侧边栏容器：粘性定位跟随滚动 */
+.toc-sidebar {
+    width: 230px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 80px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+}
+
+/* 目录内部容器（仅负责视觉样式） */
+.toc-sticky {
+    padding: 20px;
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: var(--card-border);
+    box-shadow: var(--card-shadow);
+}
+
+html[data-theme="dark"] .toc-sticky {
+    background: var(--card-bg, #2e2e33);
+    box-shadow: none;
+}
+
+/* 目录标题 */
+.toc-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    color: var(--primary);
+}
+
+/* 目录树列表重置 */
+.toc-sidebar nav > ul,
+.toc-sticky nav > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.toc-sidebar nav ul,
+.toc-sticky nav ul {
+    list-style: none;
+    padding-left: 14px;
+    margin: 0;
+}
+
+.toc-sidebar nav li,
+.toc-sticky nav li {
+    margin: 4px 0;
+}
+
+/* 目录链接样式 */
+.toc-sidebar nav a,
+.toc-sticky nav a {
+    display: block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    border-left: 2px solid transparent;
+    color: var(--secondary);
+    font-size: 13.5px;
+    line-height: 1.45;
+    text-decoration: none;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.toc-sidebar nav a:hover,
+.toc-sticky nav a:hover {
+    color: var(--primary);
+    background: var(--code-bg);
+    border-left-color: var(--primary);
+}
+
+/* 侧边栏滚动条美化 */
+.toc-sticky::-webkit-scrollbar {
+    width: 4px;
+}
+
+.toc-sticky::-webkit-scrollbar-thumb {
+    background: var(--tertiary);
+    border-radius: 2px;
+}
+
+.toc-sticky::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* 文章固定宽度，不随侧边栏拉伸 */
+.post-wrapper .post-single {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 950px !important;
+    min-width: 0;
+    margin-top: 0 !important;
+}
+
+/* ========================================= */
+/* 响应式：窄屏隐藏侧边栏                      */
+/* ========================================= */
+@media screen and (max-width: 1250px) {
+    body:not(.list) .main {
+        max-width: 950px !important;
+    }
+
+    .post-wrapper {
+        flex-direction: column;
+    }
+
+    .toc-sidebar {
+        display: none;
+    }
+}

@@ -8,18 +8,39 @@ tags = ["测试"]
 
 本页面用于测试功能。
 
-$$a / b = \frac{a}{b}$$
+# markdowm测试
+
+$$\phi(n) = \sum_{i = 1}^{n} [\gcd(i, n) = 1]$$
 
 你好？
 
-时间复杂度为 $\mathcal{O}(V + E)$ 或者是用欧拉-麦克劳林公式推导。我们考虑使用一个超级长的行来测试他同一段内文字的这个间距是否符合一个舒适的观看条件。
+时间复杂度为 $\mathcal{O}(n)$。我们考虑使用一个超级长的行来测试他同一段内文字的这个间距是否符合一个舒适的观看条件，这要求我们的文本需要特别特别的长来帮助我们完成这一点。
+
+this is a question.
+
+what i wanna tell you is that...
+
+# H1标题
+
+## H2标题
+
+### H3标题
+
+#### H4标题
+
+##### H5标题
+
+###### H6标题
+
+
+
+# 图片测试
 
 ![test图片](https://cdn.luogu.com.cn/upload/image_hosting/4epse4bs.png)
 
 [旧博客链接](https://www.cnblogs.com/cbdsopa)
 
-
-代码测试：
+# 代码测试
 
 ```cpp
 #include <bits/stdc++.h>

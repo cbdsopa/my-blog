@@ -2,24 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>测试 on cbdsopa&#39;s blog</title>
-    <link>https://cbdsopa.github.io/my-blog/categories/%E6%B5%8B%E8%AF%95/</link>
+    <link>http://localhost:1313/my-blog/categories/%E6%B5%8B%E8%AF%95/</link>
     <description>Recent content in 测试 on cbdsopa&#39;s blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 27 Jul 2026 14:46:04 +0800</lastBuildDate>
-    <atom:link href="https://cbdsopa.github.io/my-blog/categories/%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/my-blog/categories/%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Test Post</title>
-      <link>https://cbdsopa.github.io/my-blog/posts/test-post/</link>
+      <link>http://localhost:1313/my-blog/posts/test-post/</link>
       <pubDate>Mon, 27 Jul 2026 14:46:04 +0800</pubDate>
-      <guid>https://cbdsopa.github.io/my-blog/posts/test-post/</guid>
+      <guid>http://localhost:1313/my-blog/posts/test-post/</guid>
       <description>&lt;p&gt;本页面用于测试功能。&lt;/p&gt;
-&lt;p&gt;$$a / b = \frac{a}{b}$$&lt;/p&gt;
+&lt;h1 id=&#34;markdowm测试&#34;&gt;markdowm测试&lt;/h1&gt;
+&lt;p&gt;$$\phi(n) = \sum_{i = 1}^{n} [\gcd(i, n) = 1]$$&lt;/p&gt;
 &lt;p&gt;你好？&lt;/p&gt;
-&lt;p&gt;时间复杂度为 $\mathcal{O}(V + E)$ 或者是用欧拉-麦克劳林公式推导。我们考虑使用一个超级长的行来测试他同一段内文字的这个间距是否符合一个舒适的观看条件。&lt;/p&gt;
+&lt;p&gt;时间复杂度为 $\mathcal{O}(n)$。我们考虑使用一个超级长的行来测试他同一段内文字的这个间距是否符合一个舒适的观看条件，这要求我们的文本需要特别特别的长来帮助我们完成这一点。&lt;/p&gt;
+&lt;p&gt;this is a question.&lt;/p&gt;
+&lt;p&gt;what i wanna tell you is that&amp;hellip;&lt;/p&gt;
+&lt;h1 id=&#34;h1标题&#34;&gt;H1标题&lt;/h1&gt;
+&lt;h2 id=&#34;h2标题&#34;&gt;H2标题&lt;/h2&gt;
+&lt;h3 id=&#34;h3标题&#34;&gt;H3标题&lt;/h3&gt;
+&lt;h4 id=&#34;h4标题&#34;&gt;H4标题&lt;/h4&gt;
+&lt;h5 id=&#34;h5标题&#34;&gt;H5标题&lt;/h5&gt;
+&lt;h6 id=&#34;h6标题&#34;&gt;H6标题&lt;/h6&gt;
+&lt;h1 id=&#34;图片测试&#34;&gt;图片测试&lt;/h1&gt;
 &lt;p&gt;&lt;img alt=&#34;test图片&#34; loading=&#34;lazy&#34; src=&#34;https://cdn.luogu.com.cn/upload/image_hosting/4epse4bs.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.cnblogs.com/cbdsopa&#34;&gt;旧博客链接&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;代码测试：&lt;/p&gt;
+&lt;h1 id=&#34;代码测试&#34;&gt;代码测试&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;bits/stdc++.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;namespace&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ull&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;unsigned&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;long&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;long&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
