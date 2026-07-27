@@ -1,0 +1,36 @@
+/* 1. 改变整个网页的底色（浅灰色，让稿纸能凸显出来） */
+body {
+    background-color: #f4f5f7; /* 这里可以自己调颜色，目前是浅灰蓝 */
+}
+
+/* 2. 针对文章详情页（稿纸部分）的卡片化设计 */
+.post-single {
+    background-color: #ffffff; /* 稿纸设为纯白 */
+    padding: 40px;             /* 给稿纸四周留出内边距 */
+    border-radius: 12px;       /* 稿纸的四个角变圆润 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* 添加底部阴影，产生悬浮感 */
+    margin-top: 20px;          /* 顶部留出一点空间 */
+}
+
+/* 3. 让首页的文章列表也变成卡片（可选，如果不想要可以删掉这块） */
+.post-entry {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    border: none; /* 去除原本的下划线边框 */
+    margin-bottom: 20px;
+}
+
+/* ========================================= */
+/* 4. 适配右上角的暗黑模式（月亮图标）切换 */
+/* ========================================= */
+.dark body {
+    background-color: #1a1a1a; /* 暗黑模式下的深色大背景 */
+}
+
+.dark .post-single,
+.dark .post-entry {
+    background-color: #242424; /* 暗黑模式下的深色稿纸 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* 暗黑模式下阴影加深 */
+}
