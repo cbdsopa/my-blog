@@ -4,6 +4,7 @@ title = "cbdsopa's blog"
 theme = "PaperMod"
 [params]
   comments = true
+  ShowCodeCopyButtons = true
 
 [menu]
   [[menu.main]]
@@ -15,3 +16,12 @@ theme = "PaperMod"
     name = "标签"
     url = "/tags/"
     weight = 20
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    style = "monokai"
+    lineNos = false
+    noClasses = false
+

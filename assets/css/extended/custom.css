@@ -115,7 +115,7 @@ body {
 }
 
 /* ========================================= */
-/* 7. 调整文章正文（稿纸内）的字体大小          */
+/* 调整文章正文（稿纸内）的字体大小          */
 /* ========================================= */
 
 .post-content {
@@ -126,4 +126,207 @@ body {
 /* 如果你还想顺便调一下段落与段落之间的距离（段间距） */
 .post-content p {
     margin-bottom: 1em !important; /* 默认通常是 1em，可以根据喜好改成 1.4em 或 1.5em */
+}
+
+
+/* ========================================= */
+/* 调整代码块（Code Block）的字体大小与行高 */
+/* ========================================= */
+
+.post-content pre code,
+.post-content pre,
+.post-content code {
+    /* 
+      完美还原 VS Code 编辑器字体的“字体栈”：
+      优先调用各大系统自带的 VS Code 经典等宽字体，
+      最后回退到浏览器的通用等宽字体 monospace。
+    */
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important;
+    
+    /* 适当微调字号和字母间距，让 Monokai 的代码质感更细腻 */
+    font-size: 14px !important;
+    letter-spacing: 0.2px !important;
+    line-height: 1.6 !important;
+
+    -moz-tab-size: 4 !important;
+    -o-tab-size: 4 !important;
+    tab-size: 4 !important;
+    
+    /* 防止长代码行出现奇怪的折行导致缩进乱掉 */
+    white-space: pre !important;
+    word-break: normal !important;
+    overflow-x: auto !important;
+}
+
+.post-content pre code {
+    background-color: transparent !important;
+    color: inherit !important;
+    font-family: inherit !important;
+}
+
+
+.post-content pre,
+.post-content pre.chroma {
+    background-color: #272822 !important;
+    color: #f8f8f2 !important;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+    border: 1px solid #3e3d32 !important;
+    box-shadow: none !important;
+    
+    /* 严格对齐 4 空格缩进 */
+    -moz-tab-size: 4 !important;
+    -o-tab-size: 4 !important;
+    tab-size: 4 !important;
+    white-space: pre !important;
+    overflow-x: auto !important;
+}
+
+.post-content pre code,
+.post-content .chroma code {
+    background-color: transparent !important;
+    color: inherit !important;
+    font-family: inherit !important;
+}
+
+/* 2. 绑定 .chroma 容器的 Monokai 经典荧光色精准狙击 */
+/* 关键字（如 int, return, for, if, class, template 等） -> 经典荧光粉红 */
+.post-content .chroma .k,
+.post-content .chroma .kc,
+.post-content .chroma .kd,
+.post-content .chroma .kn,
+.post-content .chroma .kp,
+.post-content .chroma .kr,
+.post-content .chroma .nt {
+    color: #f92672 !important;
+}
+
+/* 数据类型与类名（如 vector, string, std, void 等） -> 亮青色 */
+.post-content .chroma .kt,
+.post-content .chroma .nc,
+.post-content .chroma .no {
+    color: #66d9ef !important;
+}
+
+/* 函数名（如 main, push_back, solve 等） -> 荧光黄绿 */
+.post-content .chroma .nf,
+.post-content .chroma .fm {
+    color: #a6e22e !important;
+}
+
+/* 字符串（如双引号里的内容） -> 暖黄色 */
+.post-content .chroma .s,
+.post-content .chroma .s1,
+.post-content .chroma .s2 {
+    color: #e6db74 !important;
+}
+
+/* 数字（如 0, 100） -> 紫罗兰色 */
+.post-content .chroma .m,
+.post-content .chroma .mi,
+.post-content .chroma .mf {
+    color: #ae81ff !important;
+}
+
+/* 注释 -> 灰色斜体 */
+.post-content .chroma .c,
+.post-content .chroma .c1,
+.post-content .chroma .ch {
+    color: #75715e !important;
+    font-style: italic !important;
+}
+
+
+/* ========================================= */
+/* Monokai 风格代码块右上角复制按钮          */
+/* ========================================= */
+
+/* 1. 确保代码块容器为相对定位，为右上角绝对定位打底 */
+.post-content pre,
+.post-content .highlight {
+    position: relative !important;
+}
+
+/* 2. 精准定位并美化复制按钮 */
+.post-content .copy-code {
+    position: absolute !important;
+    top: 8px !important;
+    right: 8px !important;
+    padding: 3px 8px !important;
+    font-size: 12px !important;
+    font-family: Consolas, Monaco, sans-serif !important;
+    color: rgba(248, 248, 242, 0.7) !important; /* 柔和的 Monokai 基础白 */
+    background: rgba(255, 255, 255, 0.08) !important; /* 半透明小底色 */
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    z-index: 10 !important;
+    
+    /* 0.25s 丝滑过渡 */
+    transition: background-color 0.25s ease, 
+                color 0.25s ease, 
+                transform 0.25s ease !important;
+}
+
+/* 3. 悬浮反馈：微提亮 + 微上浮 */
+.post-content .copy-code:hover {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.2) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* 4. 点击成功反馈效果 */
+.post-content .copy-code:active {
+    transform: translateY(0) !important;
+}
+
+
+/* ========================================= */
+/* 代码块折叠功能美化与状态控制             */
+/* 配合 footer.html 中的 JS 联动             */
+/* ========================================= */
+
+/* 折叠状态：固定高度隐藏溢出（纯 class 驱动，JS 不再内联写样式） */
+.post-content .highlight.collapsed {
+    max-height: 70px !important;
+    overflow: hidden !important;
+}
+
+/* 折叠时底部渐变阴影遮罩 */
+.post-content .highlight.collapsed::after {
+    content: "" !important;
+    position: absolute !important;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    background: linear-gradient(to bottom, rgba(39, 40, 34, 0), rgba(39, 40, 34, 0.98)) !important;
+    pointer-events: none;
+    z-index: 5 !important;
+}
+
+/* 折叠按钮：位于代码块左上角，Copy 按钮在右上角，互不干扰 */
+.code-fold-btn {
+    position: absolute !important;
+    top: 8px !important;
+    left: 8px !important;
+    padding: 3px 8px !important;
+    font-size: 12px !important;
+    font-family: Consolas, Monaco, sans-serif !important;
+    color: rgba(248, 248, 242, 0.7) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    z-index: 20 !important;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease !important;
+}
+
+.code-fold-btn:hover {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.2) !important;
+    transform: translateY(-1px) !important;
 }
