@@ -15,3 +15,4 @@ $$a / b = \frac{a}{b}$$
 
 ![test图片](https://cdn.luogu.com.cn/upload/image_hosting/4epse4bs.png)
 
+[旧博客链接](https://www.cnblogs.com/cbdsopa)
