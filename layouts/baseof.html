@@ -38,11 +38,21 @@
   var curtain = document.getElementById('curtain');
   if (!curtain) return;
 
-  // 页面加载：帷幕打开（强制回流确保初始状态已渲染）
-  curtain.offsetHeight;
-  requestAnimationFrame(function() {
-    curtain.classList.add('curtain-open');
-  });
+  // 页面加载：等页面完全加载后再打开帷幕
+  function openCurtain() {
+    curtain.offsetHeight;
+    requestAnimationFrame(function() {
+      curtain.classList.add('curtain-open');
+    });
+  }
+  // 已加载则立即打开，否则等待 load 事件
+  if (document.readyState === 'complete') {
+    openCurtain();
+  } else {
+    window.addEventListener('load', openCurtain);
+    // 保底：3s 后强制执行
+    setTimeout(openCurtain, 3000);
+  }
 
   // 内部链接点击：帷幕落下 → 跳转
   document.addEventListener('click', function(e) {
