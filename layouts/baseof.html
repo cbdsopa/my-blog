@@ -1,0 +1,73 @@
+{{- if lt hugo.Version "0.146.0" }}
+{{- errorf "=> hugo v0.146.0 or greater is required for hugo-PaperMod to build " }}
+{{- end -}}
+
+<!DOCTYPE html>
+{{- $theme := site.Params.defaultTheme | default "auto" }}
+{{- if eq $theme "dark" }}
+<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}" data-theme="dark">
+{{- else if eq $theme "light" }}
+<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}" data-theme="light">
+{{- else }}
+<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}" data-theme="auto">
+{{- end }}
+
+<head>
+    {{- partial "head.html" . }}
+</head>
+
+{{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) }}
+<body class="list" id="top">
+{{- else }}
+<body id="top">
+{{- end }}
+    <!-- 帷幕过渡 -->
+    <div id="curtain">
+      <div class="curtain-panel curtain-panel-top"></div>
+      <div class="curtain-panel curtain-panel-bottom"></div>
+    </div>
+    {{- partial "intro.html" . }}
+    {{ partialCached "header.html" . .Page -}}
+    <main class="main">
+        {{- block "main" . }}{{ end }}
+    </main>
+    {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
+
+<script>
+(function() {
+  var curtain = document.getElementById('curtain');
+  if (!curtain) return;
+
+  // 页面加载：帷幕打开（强制回流确保初始状态已渲染）
+  curtain.offsetHeight;
+  requestAnimationFrame(function() {
+    curtain.classList.add('curtain-open');
+  });
+
+  // 内部链接点击：帷幕落下 → 跳转
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a');
+    if (!link) return;
+    // 只拦截站内链接
+    if (link.hostname !== location.hostname) return;
+    if (link.target === '_blank') return;
+    if (link.hasAttribute('download')) return;
+    // 排除 # 锚点
+    var href = link.getAttribute('href');
+    if (!href || href === '#' || href.startsWith('#')) return;
+    // 排除 livereload
+    if (href.includes('livereload')) return;
+
+    e.preventDefault();
+    curtain.classList.remove('curtain-open');
+    curtain.classList.add('curtain-close');
+
+    setTimeout(function() {
+      location.href = href;
+    }, 400);
+  });
+})();
+</script>
+</body>
+
+</html>

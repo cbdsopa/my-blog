@@ -1,0 +1,55 @@
+<!-- 主页入场动画 -->
+{{- if .IsHome }}
+<div id="intro-overlay">
+  <div class="intro-panel intro-panel-top"></div>
+  <div class="intro-panel intro-panel-bottom"></div>
+  <div class="intro-slash-line"></div>
+  <div class="intro-circle-wrap">
+    <svg class="intro-ring" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="2.5"
+        stroke-dasharray="220 44" stroke-dashoffset="0" stroke-linecap="round" />
+    </svg>
+  </div>
+</div>
+<script>
+(function() {
+  var overlay = document.getElementById('intro-overlay');
+  if (!overlay) return;
+  var ring = overlay.querySelector('.intro-ring');
+  var MIN_SPIN = 1200; // 保底旋转时间
+  var startTime = Date.now();
+  var loaded = false;
+
+  function trigger() {
+    if (loaded) return;
+    loaded = true;
+
+    // 确保至少转了保底时间
+    var elapsed = Date.now() - startTime;
+    var remaining = Math.max(0, MIN_SPIN - elapsed);
+
+    setTimeout(function() {
+      if (ring) ring.classList.add('intro-ring-paused');
+    }, remaining);
+
+    setTimeout(function() {
+      overlay.classList.add('intro-slash');
+    }, remaining + 50);
+
+    setTimeout(function() {
+      overlay.classList.add('intro-drop');
+    }, remaining + 350);
+
+    setTimeout(function() {
+      overlay.classList.add('intro-done');
+    }, remaining + 2000);
+  }
+
+  // 页面加载完成后触发
+  window.addEventListener('load', trigger);
+
+  // 超时保底：最多转 5s 强制执行
+  setTimeout(trigger, 5000);
+})();
+</script>
+{{- end }}
