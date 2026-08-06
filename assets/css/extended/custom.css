@@ -720,8 +720,8 @@ html[data-theme="dark"] .intro-panel {
     pointer-events: none;
 }
 
-.curtain-panel-top { top: 0; transform: translateY(0); }
-.curtain-panel-bottom { bottom: 0; transform: translateY(0); }
+.curtain-panel-top { top: 0; transform: translateY(0); border-bottom: 1px solid var(--border); }
+.curtain-panel-bottom { bottom: 0; transform: translateY(0); border-top: 1px solid var(--border); }
 
 /* 帷幕打开（页面露出） */
 #curtain.curtain-open .curtain-panel-top {
