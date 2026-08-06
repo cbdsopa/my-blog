@@ -8,6 +8,12 @@ theme = "PaperMod"
   ShowToc = true
   mainSections = ["posts"]
 
+[params.assets]
+  favicon = "https://github.com/cbdsopa.png"
+  favicon16x16 = "https://github.com/cbdsopa.png"
+  favicon32x32 = "https://github.com/cbdsopa.png"
+  apple_touch_icon = "https://github.com/cbdsopa.png"
+
 [params.profileMode]
   enabled = true
   title = "cbdsopa"
