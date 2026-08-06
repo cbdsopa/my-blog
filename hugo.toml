@@ -9,10 +9,10 @@ theme = "PaperMod"
   mainSections = ["posts"]
 
 [params.assets]
-  favicon = "https://github.com/cbdsopa.png"
-  favicon16x16 = "https://github.com/cbdsopa.png"
-  favicon32x32 = "https://github.com/cbdsopa.png"
-  apple_touch_icon = "https://github.com/cbdsopa.png"
+  favicon = "favicon.svg"
+  favicon16x16 = "favicon.svg"
+  favicon32x32 = "favicon.svg"
+  apple_touch_icon = "favicon.svg"
 
 [params.profileMode]
   enabled = true
