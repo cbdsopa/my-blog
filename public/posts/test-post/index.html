@@ -829,10 +829,20 @@ setTimeout(initCodeFold, 800);
   if (!curtain) return;
 
   
-  curtain.offsetHeight;
-  requestAnimationFrame(function() {
-    curtain.classList.add('curtain-open');
-  });
+  function openCurtain() {
+    curtain.offsetHeight;
+    requestAnimationFrame(function() {
+      curtain.classList.add('curtain-open');
+    });
+  }
+  
+  if (document.readyState === 'complete') {
+    openCurtain();
+  } else {
+    window.addEventListener('load', openCurtain);
+    
+    setTimeout(openCurtain, 3000);
+  }
 
   
   document.addEventListener('click', function(e) {
