@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><script src="/my-blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=my-blog/livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>测试 | cbdsopa&#39;s blog</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/my-blog/categories/%E6%B5%8B%E8%AF%95/">
-<link crossorigin="anonymous" href="/my-blog/assets/css/stylesheet.cfd2dce4cd76caafc01a97632006d70ccaefd4eb6eba4130e4b876e72d37f5d7.css" integrity="sha256-z9Lc5M12yq/AGpdjIAbXDMrv1OtuukEw5Lh25y039dc=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/my-blog/favicon.svg">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/my-blog/favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/my-blog/favicon.svg">
-<link rel="apple-touch-icon" href="http://localhost:1313/my-blog/favicon.svg">
-<link rel="mask-icon" href="http://localhost:1313/my-blog/safari-pinned-tab.svg">
+<link rel="canonical" href="https://cbdsopa.github.io/my-blog/categories/%E6%B5%8B%E8%AF%95/">
+<link crossorigin="anonymous" href="/my-blog/assets/css/stylesheet.d18de0fd9fba3ca290bc188c29dd6a970e4800911bfbd51c4c56823d255831f0.css" integrity="sha256-0Y3g/Z&#43;6PKKQvBiMKd1qlw5IAJEb&#43;9UcTFaCPSVYMfA=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://cbdsopa.github.io/my-blog/favicon.svg">
+<link rel="icon" type="image/png" sizes="16x16" href="https://cbdsopa.github.io/my-blog/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="https://cbdsopa.github.io/my-blog/favicon.svg">
+<link rel="apple-touch-icon" href="https://cbdsopa.github.io/my-blog/favicon.svg">
+<link rel="mask-icon" href="https://cbdsopa.github.io/my-blog/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/my-blog/categories/%E6%B5%8B%E8%AF%95/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/my-blog/categories/%E6%B5%8B%E8%AF%95/">
+<link rel="alternate" type="application/rss+xml" href="https://cbdsopa.github.io/my-blog/categories/%E6%B5%8B%E8%AF%95/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="https://cbdsopa.github.io/my-blog/categories/%E6%B5%8B%E8%AF%95/">
 <noscript>
     <style>
         #theme-toggle,
@@ -79,6 +79,14 @@
     };
 </script>
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<meta property="og:url" content="https://cbdsopa.github.io/my-blog/categories/%E6%B5%8B%E8%AF%95/">
+  <meta property="og:site_name" content="cbdsopa&#39;s blog">
+  <meta property="og:title" content="测试">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="测试">
 
 </head>
 <body class="list" id="top">
@@ -159,17 +167,18 @@ markdowm测试 $$\phi(n) = \sum_{i = 1}^{n} [\gcd(i, n) = 1]$$
 this is a question.
 what i wanna tell you is that…
 H1标题 H2标题 H3标题 H4标题 H5标题 H6标题 图片测试 旧博客链接
-代码测试 #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; using ull = unsigned long long; using ll = long long; using ldb = long double; using db = double; template &lt;typename T&gt; auto makeVector(int n, T val) { return vector&lt;T&gt;(n, val); } template &lt;typename... Args&gt; auto makeVector(int n, Args... args) { auto val = makeVector(args...); return vector&lt;decltype(val)&gt;(n, val); } const int mod = 998244353; int inc(int x, int y, int p = mod) { return (x &#43;= y) &gt;= p ? x - p : x; } int dec(int x, int y, int p = mod) { return (x -= y) &lt; 0 ? x &#43; p : x; } int mul(int x, int y, int p = mod) { return 1ll * x * y % mod; } int qpow(int a, ll b, int p = mod) { int res = 1; while(b) { if(b &amp; 1) res = mul(res, a, p); a = mul(a, a, p); b &gt;&gt;= 1; } return res; } struct Matrix { int n; decltype(makeVector(0, 0, (int)0)) c; Matrix(int n, int val = 0) : n(n), c(makeVector(n, n, val)) { } void clearE() { for (int i = 0; i &lt; n; &#43;&#43;i) { c[i][i] = 1; } } Matrix operator * (const Matrix &amp;rhs) const { Matrix res(n); for (int i = 0; i &lt; n; &#43;&#43;i) { for (int k = 0; k &lt; n; &#43;&#43;k) { if (!c[i][k]) continue; for (int j = 0; j &lt; n; &#43;&#43;j) { res.c[i][j] = inc( res.c[i][j], mul(c[i][k], rhs.c[k][j]) ); } } } return res; } }; vector&lt;int&gt; operator * (const vector&lt;int&gt; &amp;v, const Matrix &amp;m) { int n = v.size(); vector&lt;int&gt; res(n); for (int k = 0; k &lt; n; &#43;&#43;k) { if (!v[k]) continue; for (int j = 0; j &lt; n; &#43;&#43;j) { res[j] = inc( res[j], mul(v[k], m.c[k][j]) ); } } return res; } vector&lt;int&gt; bm(const vector&lt;int&gt; &amp;s) { vector&lt;int&gt; C = {1}, B = {1}; int L = 0, m = 1, b = 1; for (int i = 0; i &lt; s.size(); &#43;&#43;i) { int d = 0; for (int j = 0; j &lt;= L; &#43;&#43;j) { d = inc(d, mul(s[i - j], C[j])); } if (d == 0) { &#43;&#43;m; continue; } vector D = C; int c = mul(mod - d, qpow(b, mod - 2)); if (C.size() &lt; B.size() &#43; m) C.resize(B.size() &#43; m); for (int j = 0; j &lt; B.size(); &#43;&#43;j) { C[j &#43; m] = inc(C[j &#43; m], mul(c, B[j])); } if (2 * L &lt;= i) { L = i - L &#43; 1; B = D; m = 1; b = d; } else { &#43;&#43;m; } } C.resize(L &#43; 1); return C; } vector&lt;int&gt; polyMul(const vector&lt;int&gt; &amp;a, const vector&lt;int&gt; &amp;b, const vector&lt;int&gt; &amp;bm_seq) { int n = a.size() &#43; b.size() - 1; int L = bm_seq.size() - 1; vector&lt;int&gt; res(n); for (int i = 0; i &lt; a.size(); &#43;&#43;i) { for (int j = 0; j &lt; b.size(); &#43;&#43;j) { res[i &#43; j] = inc(res[i &#43; j], mul(a[i], b[j])); } } for (int i = res.size() - 1; i &gt;= L; --i) { if (!res[i]) continue; for (int j = 1; j &lt;= L; &#43;&#43;j) { res[i - j] = dec(res[i - j], mul(bm_seq[j], res[i])); } } res.resize(min&lt;int&gt;(L, res.size())); return res; } vector&lt;int&gt; polyQpow(ll b, const vector&lt;int&gt; &amp;bm_seq) { vector&lt;int&gt; res = {1}, a = {0, 1}; while (b) { if (b &amp; 1) res = polyMul(res, a, bm_seq); a = polyMul(a, a, bm_seq); b &gt;&gt;= 1; } return res; } void solve() { int n, m; cin &gt;&gt; n &gt;&gt; m; if (n == 1) { cout &lt;&lt; mul(3, qpow(2, m - 1) ) &lt;&lt; &#34;\n&#34;; return; } int k = 1 &lt;&lt; (n - 2); Matrix trans(k); for (int s = 0; s &lt; k; &#43;&#43;s) { vector&lt;int&gt; sa(n); sa[0] = 0; sa[1] = 1; for (int i = 2; i &lt; n; &#43;&#43;i) { sa[i] = (s &gt;&gt; i - 2 &amp; 1) ? sa[i - 2] : 3 - sa[i - 1] - sa[i - 2]; } for (int x = 0; x &lt; 3; &#43;&#43;x) for (int y = 0; y &lt; 3; &#43;&#43;y) for (int t = 0; t &lt; k; &#43;&#43;t) { if (x == y) continue; vector&lt;int&gt; ta(n); ta[0] = x; ta[1] = y; for (int i = 2; i &lt; n; &#43;&#43;i) { ta[i] = (t &gt;&gt; i - 2 &amp; 1) ? ta[i - 2] : 3 - ta[i - 1] - ta[i - 2]; } bool flag = 1; for (int i = 0; i &lt; n; &#43;&#43;i) { if (ta[i] == sa[i]) { flag = 0; break; } } trans.c[s][t] &#43;= flag; } } int lim = min(128 * 2, m); vector&lt;int&gt; ans(k, 6); vector&lt;int&gt; seq(lim); for (int i = 0; i &lt; lim; &#43;&#43;i) { for (int j = 0; j &lt; k; &#43;&#43;j) seq[i] = inc(seq[i], ans[j]); if (i == lim - 1) break; ans = ans * trans; } if (m - 1 &lt; lim) { cout &lt;&lt; seq[m - 1] &lt;&lt; &#34;\n&#34;; return; } vector&lt;int&gt; bm_seq = bm(seq); vector&lt;int&gt; R = polyQpow(m - 1, bm_seq); int result = 0; for (int i = 0; i &lt; R.size(); &#43;&#43;i) { result = inc(result, mul(R[i], seq[i])); } cout &lt;&lt; result &lt;&lt; &#34;\n&#34;; } int main(){ ios::sync_with_stdio(false); cin.tie(0); #ifdef LOCAL freopen(&#34;a.in&#34;, &#34;r&#34;, stdin); freopen(&#34;a.out&#34;, &#34;w&#34;, stdout); #endif int T = 1; // cin &gt;&gt; T; while (T--) { solve(); } return 0; } 评论区测试</p>
+代码测试 #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; using ull = unsigned long long; using ll = long long; using ldb = long double; using db = double; template &lt;typename T&gt; auto makeVector(int n, T val) { return vector&lt;T&gt;(n, val); } template &lt;typename... Args&gt; auto makeVector(int n, Args... args) { auto val = makeVector(args...); return vector&lt;decltype(val)&gt;(n, val); } const int mod = 998244353; int inc(int x, int y, int p = mod) { return (x &#43;= y) &gt;= p ? x - p : x; } int dec(int x, int y, int p = mod) { return (x -= y) &lt; 0 ? x &#43; p : x; } int mul(int x, int y, int p = mod) { return 1ll * x * y % mod; } int qpow(int a, ll b, int p = mod) { int res = 1; while(b) { if(b &amp; 1) res = mul(res, a, p); a = mul(a, a, p); b &gt;&gt;= 1; } return res; } struct Matrix { int n; decltype(makeVector(0, 0, (int)0)) c; Matrix(int n, int val = 0) : n(n), c(makeVector(n, n, val)) { } void clearE() { for (int i = 0; i &lt; n; &#43;&#43;i) { c[i][i] = 1; } } Matrix operator * (const Matrix &amp;rhs) const { Matrix res(n); for (int i = 0; i &lt; n; &#43;&#43;i) { for (int k = 0; k &lt; n; &#43;&#43;k) { if (!c[i][k]) continue; for (int j = 0; j &lt; n; &#43;&#43;j) { res.c[i][j] = inc( res.c[i][j], mul(c[i][k], rhs.c[k][j]) ); } } } return res; } }; vector&lt;int&gt; operator * (const vector&lt;int&gt; &amp;v, const Matrix &amp;m) { int n = v.size(); vector&lt;int&gt; res(n); for (int k = 0; k &lt; n; &#43;&#43;k) { if (!v[k]) continue; for (int j = 0; j &lt; n; &#43;&#43;j) { res[j] = inc( res[j], mul(v[k], m.c[k][j]) ); } } return res; } vector&lt;int&gt; bm(const vector&lt;int&gt; &amp;s) { vector&lt;int&gt; C = {1}, B = {1}; int L = 0, m = 1, b = 1; for (int i = 0; i &lt; s.size(); &#43;&#43;i) { int d = 0; for (int j = 0; j &lt;= L; &#43;&#43;j) { d = inc(d, mul(s[i - j], C[j])); } if (d == 0) { &#43;&#43;m; continue; } vector D = C; int c = mul(mod - d, qpow(b, mod - 2)); if (C.size() &lt; B.size() &#43; m) C.resize(B.size() &#43; m); for (int j = 0; j &lt; B.size(); &#43;&#43;j) { C[j &#43; m] = inc(C[j &#43; m], mul(c, B[j])); } if (2 * L &lt;= i) { L = i - L &#43; 1; B = D; m = 1; b = d; } else { &#43;&#43;m; } } C.resize(L &#43; 1); return C; } vector&lt;int&gt; polyMul(const vector&lt;int&gt; &amp;a, const vector&lt;int&gt; &amp;b, const vector&lt;int&gt; &amp;bm_seq) { int n = a.size() &#43; b.size() - 1; int L = bm_seq.size() - 1; vector&lt;int&gt; res(n); for (int i = 0; i &lt; a.size(); &#43;&#43;i) { for (int j = 0; j &lt; b.size(); &#43;&#43;j) { res[i &#43; j] = inc(res[i &#43; j], mul(a[i], b[j])); } } for (int i = res.size() - 1; i &gt;= L; --i) { if (!res[i]) continue; for (int j = 1; j &lt;= L; &#43;&#43;j) { res[i - j] = dec(res[i - j], mul(bm_seq[j], res[i])); } } res.resize(min&lt;int&gt;(L, res.size())); return res; } vector&lt;int&gt; polyQpow(ll b, const vector&lt;int&gt; &amp;bm_seq) { vector&lt;int&gt; res = {1}, a = {0, 1}; while (b) { if (b &amp; 1) res = polyMul(res, a, bm_seq); a = polyMul(a, a, bm_seq); b &gt;&gt;= 1; } return res; } void solve() { int n, m; cin &gt;&gt; n &gt;&gt; m; if (n == 1) { cout &lt;&lt; mul(3, qpow(2, m - 1) ) &lt;&lt; &#34;\n&#34;; return; } int k = 1 &lt;&lt; (n - 2); Matrix trans(k); for (int s = 0; s &lt; k; &#43;&#43;s) { vector&lt;int&gt; sa(n); sa[0] = 0; sa[1] = 1; for (int i = 2; i &lt; n; &#43;&#43;i) { sa[i] = (s &gt;&gt; i - 2 &amp; 1) ? sa[i - 2] : 3 - sa[i - 1] - sa[i - 2]; } for (int x = 0; x &lt; 3; &#43;&#43;x) for (int y = 0; y &lt; 3; &#43;&#43;y) for (int t = 0; t &lt; k; &#43;&#43;t) { if (x == y) continue; vector&lt;int&gt; ta(n); ta[0] = x; ta[1] = y; for (int i = 2; i &lt; n; &#43;&#43;i) { ta[i] = (t &gt;&gt; i - 2 &amp; 1) ? ta[i - 2] : 3 - ta[i - 1] - ta[i - 2]; } bool flag = 1; for (int i = 0; i &lt; n; &#43;&#43;i) { if (ta[i] == sa[i]) { flag = 0; break; } } trans.c[s][t] &#43;= flag; } } int lim = min(128 * 2, m); vector&lt;int&gt; ans(k, 6); vector&lt;int&gt; seq(lim); for (int i = 0; i &lt; lim; &#43;&#43;i) { for (int j = 0; j &lt; k; &#43;&#43;j) seq[i] = inc(seq[i], ans[j]); if (i == lim - 1) break; ans = ans * trans; } if (m - 1 &lt; lim) { cout &lt;&lt; seq[m - 1] &lt;&lt; &#34;\n&#34;; return; } vector&lt;int&gt; bm_seq = bm(seq); vector&lt;int&gt; R = polyQpow(m - 1, bm_seq); int result = 0; for (int i = 0; i &lt; R.size(); &#43;&#43;i) { result = inc(result, mul(R[i], seq[i])); } cout &lt;&lt; result &lt;&lt; &#34;\n&#34;; } int main(){ ios::sync_with_stdio(false); cin.tie(0); #ifdef LOCAL freopen(&#34;a.in&#34;, &#34;r&#34;, stdin); freopen(&#34;a.out&#34;, &#34;w&#34;, stdout); #endif int T = 1; // cin &gt;&gt; T; while (T--) { solve(); } return 0; } 评论区测试 看看下面的评论区吧。
+</p>
   </div>
   <footer class="entry-footer">
 
 <span title='2026-07-27 14:46:04 +0800 CST'>July 27, 2026</span></footer>
-  <a class="entry-link" aria-label="post link to Test Post" href="http://localhost:1313/my-blog/posts/test-post/"></a>
+  <a class="entry-link" aria-label="post link to Test Post" href="https://cbdsopa.github.io/my-blog/posts/test-post/"></a>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/my-blog/">cbdsopa&#39;s blog</a></span> · 
+        <span>&copy; 2026 <a href="https://cbdsopa.github.io/my-blog/">cbdsopa&#39;s blog</a></span> · 
 
     <span>
         Powered by

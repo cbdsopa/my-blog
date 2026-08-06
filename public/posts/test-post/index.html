@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><script src="/my-blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=my-blog/livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Test Post | cbdsopa&#39;s blog</title>
 <meta name="keywords" content="测试">
 <meta name="description" content="本页面用于测试功能。
@@ -230,25 +230,26 @@ int main(){
 	freopen(&#34;a.in&#34;, &#34;r&#34;, stdin);
 	freopen(&#34;a.out&#34;, &#34;w&#34;, stdout);
 #endif
-	int T = 1; 
+	int T = 1;  
 	// cin &gt;&gt; T;
 	while (T--) {
 	    solve();
 	}
 	return 0;
 }
-评论区测试">
+评论区测试
+看看下面的评论区吧。">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/my-blog/posts/test-post/">
-<link crossorigin="anonymous" href="/my-blog/assets/css/stylesheet.cfd2dce4cd76caafc01a97632006d70ccaefd4eb6eba4130e4b876e72d37f5d7.css" integrity="sha256-z9Lc5M12yq/AGpdjIAbXDMrv1OtuukEw5Lh25y039dc=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/my-blog/favicon.svg">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/my-blog/favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/my-blog/favicon.svg">
-<link rel="apple-touch-icon" href="http://localhost:1313/my-blog/favicon.svg">
-<link rel="mask-icon" href="http://localhost:1313/my-blog/safari-pinned-tab.svg">
+<link rel="canonical" href="https://cbdsopa.github.io/my-blog/posts/test-post/">
+<link crossorigin="anonymous" href="/my-blog/assets/css/stylesheet.d18de0fd9fba3ca290bc188c29dd6a970e4800911bfbd51c4c56823d255831f0.css" integrity="sha256-0Y3g/Z&#43;6PKKQvBiMKd1qlw5IAJEb&#43;9UcTFaCPSVYMfA=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://cbdsopa.github.io/my-blog/favicon.svg">
+<link rel="icon" type="image/png" sizes="16x16" href="https://cbdsopa.github.io/my-blog/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="https://cbdsopa.github.io/my-blog/favicon.svg">
+<link rel="apple-touch-icon" href="https://cbdsopa.github.io/my-blog/favicon.svg">
+<link rel="mask-icon" href="https://cbdsopa.github.io/my-blog/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/my-blog/posts/test-post/">
+<link rel="alternate" hreflang="en" href="https://cbdsopa.github.io/my-blog/posts/test-post/">
 <noscript>
     <style>
         #theme-toggle,
@@ -308,7 +309,85 @@ int main(){
     };
 </script>
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<meta property="og:url" content="https://cbdsopa.github.io/my-blog/posts/test-post/">
+  <meta property="og:site_name" content="cbdsopa&#39;s blog">
+  <meta property="og:title" content="Test Post">
+  <meta property="og:description" content="本页面用于测试功能。
+markdowm测试 $$\phi(n) = \sum_{i = 1}^{n} [\gcd(i, n) = 1]$$
+你好？
+时间复杂度为 $\mathcal{O}(n)$。我们考虑使用一个超级长的行来测试他同一段内文字的这个间距是否符合一个舒适的观看条件，这要求我们的文本需要特别特别的长来帮助我们完成这一点。
+this is a question.
+what i wanna tell you is that…
+H1标题 H2标题 H3标题 H4标题 H5标题 H6标题 图片测试 旧博客链接
+代码测试 #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; using ull = unsigned long long; using ll = long long; using ldb = long double; using db = double; template &lt;typename T&gt; auto makeVector(int n, T val) { return vector&lt;T&gt;(n, val); } template &lt;typename... Args&gt; auto makeVector(int n, Args... args) { auto val = makeVector(args...); return vector&lt;decltype(val)&gt;(n, val); } const int mod = 998244353; int inc(int x, int y, int p = mod) { return (x &#43;= y) &gt;= p ? x - p : x; } int dec(int x, int y, int p = mod) { return (x -= y) &lt; 0 ? x &#43; p : x; } int mul(int x, int y, int p = mod) { return 1ll * x * y % mod; } int qpow(int a, ll b, int p = mod) { int res = 1; while(b) { if(b &amp; 1) res = mul(res, a, p); a = mul(a, a, p); b &gt;&gt;= 1; } return res; } struct Matrix { int n; decltype(makeVector(0, 0, (int)0)) c; Matrix(int n, int val = 0) : n(n), c(makeVector(n, n, val)) { } void clearE() { for (int i = 0; i &lt; n; &#43;&#43;i) { c[i][i] = 1; } } Matrix operator * (const Matrix &amp;rhs) const { Matrix res(n); for (int i = 0; i &lt; n; &#43;&#43;i) { for (int k = 0; k &lt; n; &#43;&#43;k) { if (!c[i][k]) continue; for (int j = 0; j &lt; n; &#43;&#43;j) { res.c[i][j] = inc( res.c[i][j], mul(c[i][k], rhs.c[k][j]) ); } } } return res; } }; vector&lt;int&gt; operator * (const vector&lt;int&gt; &amp;v, const Matrix &amp;m) { int n = v.size(); vector&lt;int&gt; res(n); for (int k = 0; k &lt; n; &#43;&#43;k) { if (!v[k]) continue; for (int j = 0; j &lt; n; &#43;&#43;j) { res[j] = inc( res[j], mul(v[k], m.c[k][j]) ); } } return res; } vector&lt;int&gt; bm(const vector&lt;int&gt; &amp;s) { vector&lt;int&gt; C = {1}, B = {1}; int L = 0, m = 1, b = 1; for (int i = 0; i &lt; s.size(); &#43;&#43;i) { int d = 0; for (int j = 0; j &lt;= L; &#43;&#43;j) { d = inc(d, mul(s[i - j], C[j])); } if (d == 0) { &#43;&#43;m; continue; } vector D = C; int c = mul(mod - d, qpow(b, mod - 2)); if (C.size() &lt; B.size() &#43; m) C.resize(B.size() &#43; m); for (int j = 0; j &lt; B.size(); &#43;&#43;j) { C[j &#43; m] = inc(C[j &#43; m], mul(c, B[j])); } if (2 * L &lt;= i) { L = i - L &#43; 1; B = D; m = 1; b = d; } else { &#43;&#43;m; } } C.resize(L &#43; 1); return C; } vector&lt;int&gt; polyMul(const vector&lt;int&gt; &amp;a, const vector&lt;int&gt; &amp;b, const vector&lt;int&gt; &amp;bm_seq) { int n = a.size() &#43; b.size() - 1; int L = bm_seq.size() - 1; vector&lt;int&gt; res(n); for (int i = 0; i &lt; a.size(); &#43;&#43;i) { for (int j = 0; j &lt; b.size(); &#43;&#43;j) { res[i &#43; j] = inc(res[i &#43; j], mul(a[i], b[j])); } } for (int i = res.size() - 1; i &gt;= L; --i) { if (!res[i]) continue; for (int j = 1; j &lt;= L; &#43;&#43;j) { res[i - j] = dec(res[i - j], mul(bm_seq[j], res[i])); } } res.resize(min&lt;int&gt;(L, res.size())); return res; } vector&lt;int&gt; polyQpow(ll b, const vector&lt;int&gt; &amp;bm_seq) { vector&lt;int&gt; res = {1}, a = {0, 1}; while (b) { if (b &amp; 1) res = polyMul(res, a, bm_seq); a = polyMul(a, a, bm_seq); b &gt;&gt;= 1; } return res; } void solve() { int n, m; cin &gt;&gt; n &gt;&gt; m; if (n == 1) { cout &lt;&lt; mul(3, qpow(2, m - 1) ) &lt;&lt; &#34;\n&#34;; return; } int k = 1 &lt;&lt; (n - 2); Matrix trans(k); for (int s = 0; s &lt; k; &#43;&#43;s) { vector&lt;int&gt; sa(n); sa[0] = 0; sa[1] = 1; for (int i = 2; i &lt; n; &#43;&#43;i) { sa[i] = (s &gt;&gt; i - 2 &amp; 1) ? sa[i - 2] : 3 - sa[i - 1] - sa[i - 2]; } for (int x = 0; x &lt; 3; &#43;&#43;x) for (int y = 0; y &lt; 3; &#43;&#43;y) for (int t = 0; t &lt; k; &#43;&#43;t) { if (x == y) continue; vector&lt;int&gt; ta(n); ta[0] = x; ta[1] = y; for (int i = 2; i &lt; n; &#43;&#43;i) { ta[i] = (t &gt;&gt; i - 2 &amp; 1) ? ta[i - 2] : 3 - ta[i - 1] - ta[i - 2]; } bool flag = 1; for (int i = 0; i &lt; n; &#43;&#43;i) { if (ta[i] == sa[i]) { flag = 0; break; } } trans.c[s][t] &#43;= flag; } } int lim = min(128 * 2, m); vector&lt;int&gt; ans(k, 6); vector&lt;int&gt; seq(lim); for (int i = 0; i &lt; lim; &#43;&#43;i) { for (int j = 0; j &lt; k; &#43;&#43;j) seq[i] = inc(seq[i], ans[j]); if (i == lim - 1) break; ans = ans * trans; } if (m - 1 &lt; lim) { cout &lt;&lt; seq[m - 1] &lt;&lt; &#34;\n&#34;; return; } vector&lt;int&gt; bm_seq = bm(seq); vector&lt;int&gt; R = polyQpow(m - 1, bm_seq); int result = 0; for (int i = 0; i &lt; R.size(); &#43;&#43;i) { result = inc(result, mul(R[i], seq[i])); } cout &lt;&lt; result &lt;&lt; &#34;\n&#34;; } int main(){ ios::sync_with_stdio(false); cin.tie(0); #ifdef LOCAL freopen(&#34;a.in&#34;, &#34;r&#34;, stdin); freopen(&#34;a.out&#34;, &#34;w&#34;, stdout); #endif int T = 1; // cin &gt;&gt; T; while (T--) { solve(); } return 0; } 评论区测试 看看下面的评论区吧。">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-07-27T14:46:04+08:00">
+    <meta property="article:modified_time" content="2026-07-27T14:46:04+08:00">
+    <meta property="article:tag" content="测试">
 
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Test Post">
+  <meta name="twitter:description" content="本页面用于测试功能。
+markdowm测试 $$\phi(n) = \sum_{i = 1}^{n} [\gcd(i, n) = 1]$$
+你好？
+时间复杂度为 $\mathcal{O}(n)$。我们考虑使用一个超级长的行来测试他同一段内文字的这个间距是否符合一个舒适的观看条件，这要求我们的文本需要特别特别的长来帮助我们完成这一点。
+this is a question.
+what i wanna tell you is that…
+H1标题 H2标题 H3标题 H4标题 H5标题 H6标题 图片测试 旧博客链接
+代码测试 #include &lt;bits/stdc&#43;&#43;.h&gt; using namespace std; using ull = unsigned long long; using ll = long long; using ldb = long double; using db = double; template &lt;typename T&gt; auto makeVector(int n, T val) { return vector&lt;T&gt;(n, val); } template &lt;typename... Args&gt; auto makeVector(int n, Args... args) { auto val = makeVector(args...); return vector&lt;decltype(val)&gt;(n, val); } const int mod = 998244353; int inc(int x, int y, int p = mod) { return (x &#43;= y) &gt;= p ? x - p : x; } int dec(int x, int y, int p = mod) { return (x -= y) &lt; 0 ? x &#43; p : x; } int mul(int x, int y, int p = mod) { return 1ll * x * y % mod; } int qpow(int a, ll b, int p = mod) { int res = 1; while(b) { if(b &amp; 1) res = mul(res, a, p); a = mul(a, a, p); b &gt;&gt;= 1; } return res; } struct Matrix { int n; decltype(makeVector(0, 0, (int)0)) c; Matrix(int n, int val = 0) : n(n), c(makeVector(n, n, val)) { } void clearE() { for (int i = 0; i &lt; n; &#43;&#43;i) { c[i][i] = 1; } } Matrix operator * (const Matrix &amp;rhs) const { Matrix res(n); for (int i = 0; i &lt; n; &#43;&#43;i) { for (int k = 0; k &lt; n; &#43;&#43;k) { if (!c[i][k]) continue; for (int j = 0; j &lt; n; &#43;&#43;j) { res.c[i][j] = inc( res.c[i][j], mul(c[i][k], rhs.c[k][j]) ); } } } return res; } }; vector&lt;int&gt; operator * (const vector&lt;int&gt; &amp;v, const Matrix &amp;m) { int n = v.size(); vector&lt;int&gt; res(n); for (int k = 0; k &lt; n; &#43;&#43;k) { if (!v[k]) continue; for (int j = 0; j &lt; n; &#43;&#43;j) { res[j] = inc( res[j], mul(v[k], m.c[k][j]) ); } } return res; } vector&lt;int&gt; bm(const vector&lt;int&gt; &amp;s) { vector&lt;int&gt; C = {1}, B = {1}; int L = 0, m = 1, b = 1; for (int i = 0; i &lt; s.size(); &#43;&#43;i) { int d = 0; for (int j = 0; j &lt;= L; &#43;&#43;j) { d = inc(d, mul(s[i - j], C[j])); } if (d == 0) { &#43;&#43;m; continue; } vector D = C; int c = mul(mod - d, qpow(b, mod - 2)); if (C.size() &lt; B.size() &#43; m) C.resize(B.size() &#43; m); for (int j = 0; j &lt; B.size(); &#43;&#43;j) { C[j &#43; m] = inc(C[j &#43; m], mul(c, B[j])); } if (2 * L &lt;= i) { L = i - L &#43; 1; B = D; m = 1; b = d; } else { &#43;&#43;m; } } C.resize(L &#43; 1); return C; } vector&lt;int&gt; polyMul(const vector&lt;int&gt; &amp;a, const vector&lt;int&gt; &amp;b, const vector&lt;int&gt; &amp;bm_seq) { int n = a.size() &#43; b.size() - 1; int L = bm_seq.size() - 1; vector&lt;int&gt; res(n); for (int i = 0; i &lt; a.size(); &#43;&#43;i) { for (int j = 0; j &lt; b.size(); &#43;&#43;j) { res[i &#43; j] = inc(res[i &#43; j], mul(a[i], b[j])); } } for (int i = res.size() - 1; i &gt;= L; --i) { if (!res[i]) continue; for (int j = 1; j &lt;= L; &#43;&#43;j) { res[i - j] = dec(res[i - j], mul(bm_seq[j], res[i])); } } res.resize(min&lt;int&gt;(L, res.size())); return res; } vector&lt;int&gt; polyQpow(ll b, const vector&lt;int&gt; &amp;bm_seq) { vector&lt;int&gt; res = {1}, a = {0, 1}; while (b) { if (b &amp; 1) res = polyMul(res, a, bm_seq); a = polyMul(a, a, bm_seq); b &gt;&gt;= 1; } return res; } void solve() { int n, m; cin &gt;&gt; n &gt;&gt; m; if (n == 1) { cout &lt;&lt; mul(3, qpow(2, m - 1) ) &lt;&lt; &#34;\n&#34;; return; } int k = 1 &lt;&lt; (n - 2); Matrix trans(k); for (int s = 0; s &lt; k; &#43;&#43;s) { vector&lt;int&gt; sa(n); sa[0] = 0; sa[1] = 1; for (int i = 2; i &lt; n; &#43;&#43;i) { sa[i] = (s &gt;&gt; i - 2 &amp; 1) ? sa[i - 2] : 3 - sa[i - 1] - sa[i - 2]; } for (int x = 0; x &lt; 3; &#43;&#43;x) for (int y = 0; y &lt; 3; &#43;&#43;y) for (int t = 0; t &lt; k; &#43;&#43;t) { if (x == y) continue; vector&lt;int&gt; ta(n); ta[0] = x; ta[1] = y; for (int i = 2; i &lt; n; &#43;&#43;i) { ta[i] = (t &gt;&gt; i - 2 &amp; 1) ? ta[i - 2] : 3 - ta[i - 1] - ta[i - 2]; } bool flag = 1; for (int i = 0; i &lt; n; &#43;&#43;i) { if (ta[i] == sa[i]) { flag = 0; break; } } trans.c[s][t] &#43;= flag; } } int lim = min(128 * 2, m); vector&lt;int&gt; ans(k, 6); vector&lt;int&gt; seq(lim); for (int i = 0; i &lt; lim; &#43;&#43;i) { for (int j = 0; j &lt; k; &#43;&#43;j) seq[i] = inc(seq[i], ans[j]); if (i == lim - 1) break; ans = ans * trans; } if (m - 1 &lt; lim) { cout &lt;&lt; seq[m - 1] &lt;&lt; &#34;\n&#34;; return; } vector&lt;int&gt; bm_seq = bm(seq); vector&lt;int&gt; R = polyQpow(m - 1, bm_seq); int result = 0; for (int i = 0; i &lt; R.size(); &#43;&#43;i) { result = inc(result, mul(R[i], seq[i])); } cout &lt;&lt; result &lt;&lt; &#34;\n&#34;; } int main(){ ios::sync_with_stdio(false); cin.tie(0); #ifdef LOCAL freopen(&#34;a.in&#34;, &#34;r&#34;, stdin); freopen(&#34;a.out&#34;, &#34;w&#34;, stdout); #endif int T = 1; // cin &gt;&gt; T; while (T--) { solve(); } return 0; } 评论区测试 看看下面的评论区吧。">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://cbdsopa.github.io/my-blog/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Test Post",
+      "item": "https://cbdsopa.github.io/my-blog/posts/test-post/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Test Post",
+  "name": "Test Post",
+  "description": "本页面用于测试功能。\nmarkdowm测试 $$\\phi(n) = \\sum_{i = 1}^{n} [\\gcd(i, n) = 1]$$\n你好？\n时间复杂度为 $\\mathcal{O}(n)$。我们考虑使用一个超级长的行来测试他同一段内文字的这个间距是否符合一个舒适的观看条件，这要求我们的文本需要特别特别的长来帮助我们完成这一点。\nthis is a question.\nwhat i wanna tell you is that\u0026hellip;\nH1标题 H2标题 H3标题 H4标题 H5标题 H6标题 图片测试 旧博客链接\n代码测试 #include \u0026lt;bits/stdc++.h\u0026gt; using namespace std; using ull = unsigned long long; using ll = long long; using ldb = long double; using db = double; template \u0026lt;typename T\u0026gt; auto makeVector(int n, T val) { return vector\u0026lt;T\u0026gt;(n, val); } template \u0026lt;typename... Args\u0026gt; auto makeVector(int n, Args... args) { auto val = makeVector(args...); return vector\u0026lt;decltype(val)\u0026gt;(n, val); } const int mod = 998244353; int inc(int x, int y, int p = mod) { return (x += y) \u0026gt;= p ? x - p : x; } int dec(int x, int y, int p = mod) { return (x -= y) \u0026lt; 0 ? x + p : x; } int mul(int x, int y, int p = mod) { return 1ll * x * y % mod; } int qpow(int a, ll b, int p = mod) { int res = 1; while(b) { if(b \u0026amp; 1) res = mul(res, a, p); a = mul(a, a, p); b \u0026gt;\u0026gt;= 1; } return res; } struct Matrix { int n; decltype(makeVector(0, 0, (int)0)) c; Matrix(int n, int val = 0) : n(n), c(makeVector(n, n, val)) { } void clearE() { for (int i = 0; i \u0026lt; n; ++i) { c[i][i] = 1; } } Matrix operator * (const Matrix \u0026amp;rhs) const { Matrix res(n); for (int i = 0; i \u0026lt; n; ++i) { for (int k = 0; k \u0026lt; n; ++k) { if (!c[i][k]) continue; for (int j = 0; j \u0026lt; n; ++j) { res.c[i][j] = inc( res.c[i][j], mul(c[i][k], rhs.c[k][j]) ); } } } return res; } }; vector\u0026lt;int\u0026gt; operator * (const vector\u0026lt;int\u0026gt; \u0026amp;v, const Matrix \u0026amp;m) { int n = v.size(); vector\u0026lt;int\u0026gt; res(n); for (int k = 0; k \u0026lt; n; ++k) { if (!v[k]) continue; for (int j = 0; j \u0026lt; n; ++j) { res[j] = inc( res[j], mul(v[k], m.c[k][j]) ); } } return res; } vector\u0026lt;int\u0026gt; bm(const vector\u0026lt;int\u0026gt; \u0026amp;s) { vector\u0026lt;int\u0026gt; C = {1}, B = {1}; int L = 0, m = 1, b = 1; for (int i = 0; i \u0026lt; s.size(); ++i) { int d = 0; for (int j = 0; j \u0026lt;= L; ++j) { d = inc(d, mul(s[i - j], C[j])); } if (d == 0) { ++m; continue; } vector D = C; int c = mul(mod - d, qpow(b, mod - 2)); if (C.size() \u0026lt; B.size() + m) C.resize(B.size() + m); for (int j = 0; j \u0026lt; B.size(); ++j) { C[j + m] = inc(C[j + m], mul(c, B[j])); } if (2 * L \u0026lt;= i) { L = i - L + 1; B = D; m = 1; b = d; } else { ++m; } } C.resize(L + 1); return C; } vector\u0026lt;int\u0026gt; polyMul(const vector\u0026lt;int\u0026gt; \u0026amp;a, const vector\u0026lt;int\u0026gt; \u0026amp;b, const vector\u0026lt;int\u0026gt; \u0026amp;bm_seq) { int n = a.size() + b.size() - 1; int L = bm_seq.size() - 1; vector\u0026lt;int\u0026gt; res(n); for (int i = 0; i \u0026lt; a.size(); ++i) { for (int j = 0; j \u0026lt; b.size(); ++j) { res[i + j] = inc(res[i + j], mul(a[i], b[j])); } } for (int i = res.size() - 1; i \u0026gt;= L; --i) { if (!res[i]) continue; for (int j = 1; j \u0026lt;= L; ++j) { res[i - j] = dec(res[i - j], mul(bm_seq[j], res[i])); } } res.resize(min\u0026lt;int\u0026gt;(L, res.size())); return res; } vector\u0026lt;int\u0026gt; polyQpow(ll b, const vector\u0026lt;int\u0026gt; \u0026amp;bm_seq) { vector\u0026lt;int\u0026gt; res = {1}, a = {0, 1}; while (b) { if (b \u0026amp; 1) res = polyMul(res, a, bm_seq); a = polyMul(a, a, bm_seq); b \u0026gt;\u0026gt;= 1; } return res; } void solve() { int n, m; cin \u0026gt;\u0026gt; n \u0026gt;\u0026gt; m; if (n == 1) { cout \u0026lt;\u0026lt; mul(3, qpow(2, m - 1) ) \u0026lt;\u0026lt; \u0026#34;\\n\u0026#34;; return; } int k = 1 \u0026lt;\u0026lt; (n - 2); Matrix trans(k); for (int s = 0; s \u0026lt; k; ++s) { vector\u0026lt;int\u0026gt; sa(n); sa[0] = 0; sa[1] = 1; for (int i = 2; i \u0026lt; n; ++i) { sa[i] = (s \u0026gt;\u0026gt; i - 2 \u0026amp; 1) ? sa[i - 2] : 3 - sa[i - 1] - sa[i - 2]; } for (int x = 0; x \u0026lt; 3; ++x) for (int y = 0; y \u0026lt; 3; ++y) for (int t = 0; t \u0026lt; k; ++t) { if (x == y) continue; vector\u0026lt;int\u0026gt; ta(n); ta[0] = x; ta[1] = y; for (int i = 2; i \u0026lt; n; ++i) { ta[i] = (t \u0026gt;\u0026gt; i - 2 \u0026amp; 1) ? ta[i - 2] : 3 - ta[i - 1] - ta[i - 2]; } bool flag = 1; for (int i = 0; i \u0026lt; n; ++i) { if (ta[i] == sa[i]) { flag = 0; break; } } trans.c[s][t] += flag; } } int lim = min(128 * 2, m); vector\u0026lt;int\u0026gt; ans(k, 6); vector\u0026lt;int\u0026gt; seq(lim); for (int i = 0; i \u0026lt; lim; ++i) { for (int j = 0; j \u0026lt; k; ++j) seq[i] = inc(seq[i], ans[j]); if (i == lim - 1) break; ans = ans * trans; } if (m - 1 \u0026lt; lim) { cout \u0026lt;\u0026lt; seq[m - 1] \u0026lt;\u0026lt; \u0026#34;\\n\u0026#34;; return; } vector\u0026lt;int\u0026gt; bm_seq = bm(seq); vector\u0026lt;int\u0026gt; R = polyQpow(m - 1, bm_seq); int result = 0; for (int i = 0; i \u0026lt; R.size(); ++i) { result = inc(result, mul(R[i], seq[i])); } cout \u0026lt;\u0026lt; result \u0026lt;\u0026lt; \u0026#34;\\n\u0026#34;; } int main(){ ios::sync_with_stdio(false); cin.tie(0); #ifdef LOCAL freopen(\u0026#34;a.in\u0026#34;, \u0026#34;r\u0026#34;, stdin); freopen(\u0026#34;a.out\u0026#34;, \u0026#34;w\u0026#34;, stdout); #endif int T = 1; // cin \u0026gt;\u0026gt; T; while (T--) { solve(); } return 0; } 评论区测试 看看下面的评论区吧。\n",
+  "keywords": [
+    "测试"
+  ],
+  "articleBody": "本页面用于测试功能。\nmarkdowm测试 $$\\phi(n) = \\sum_{i = 1}^{n} [\\gcd(i, n) = 1]$$\n你好？\n时间复杂度为 $\\mathcal{O}(n)$。我们考虑使用一个超级长的行来测试他同一段内文字的这个间距是否符合一个舒适的观看条件，这要求我们的文本需要特别特别的长来帮助我们完成这一点。\nthis is a question.\nwhat i wanna tell you is that…\nH1标题 H2标题 H3标题 H4标题 H5标题 H6标题 图片测试 旧博客链接\n代码测试 #include using namespace std; using ull = unsigned long long; using ll = long long; using ldb = long double; using db = double; template \u003ctypename T\u003e auto makeVector(int n, T val) { return vector\u003cT\u003e(n, val); } template \u003ctypename... Args\u003e auto makeVector(int n, Args... args) { auto val = makeVector(args...); return vector\u003cdecltype(val)\u003e(n, val); } const int mod = 998244353; int inc(int x, int y, int p = mod) { return (x += y) \u003e= p ? x - p : x; } int dec(int x, int y, int p = mod) { return (x -= y) \u003c 0 ? x + p : x; } int mul(int x, int y, int p = mod) { return 1ll * x * y % mod; } int qpow(int a, ll b, int p = mod) { int res = 1; while(b) { if(b \u0026 1) res = mul(res, a, p); a = mul(a, a, p); b \u003e\u003e= 1; } return res; } struct Matrix { int n; decltype(makeVector(0, 0, (int)0)) c; Matrix(int n, int val = 0) : n(n), c(makeVector(n, n, val)) { } void clearE() { for (int i = 0; i \u003c n; ++i) { c[i][i] = 1; } } Matrix operator * (const Matrix \u0026rhs) const { Matrix res(n); for (int i = 0; i \u003c n; ++i) { for (int k = 0; k \u003c n; ++k) { if (!c[i][k]) continue; for (int j = 0; j \u003c n; ++j) { res.c[i][j] = inc( res.c[i][j], mul(c[i][k], rhs.c[k][j]) ); } } } return res; } }; vector\u003cint\u003e operator * (const vector\u003cint\u003e \u0026v, const Matrix \u0026m) { int n = v.size(); vector\u003cint\u003e res(n); for (int k = 0; k \u003c n; ++k) { if (!v[k]) continue; for (int j = 0; j \u003c n; ++j) { res[j] = inc( res[j], mul(v[k], m.c[k][j]) ); } } return res; } vector\u003cint\u003e bm(const vector\u003cint\u003e \u0026s) { vector\u003cint\u003e C = {1}, B = {1}; int L = 0, m = 1, b = 1; for (int i = 0; i \u003c s.size(); ++i) { int d = 0; for (int j = 0; j \u003c= L; ++j) { d = inc(d, mul(s[i - j], C[j])); } if (d == 0) { ++m; continue; } vector D = C; int c = mul(mod - d, qpow(b, mod - 2)); if (C.size() \u003c B.size() + m) C.resize(B.size() + m); for (int j = 0; j \u003c B.size(); ++j) { C[j + m] = inc(C[j + m], mul(c, B[j])); } if (2 * L \u003c= i) { L = i - L + 1; B = D; m = 1; b = d; } else { ++m; } } C.resize(L + 1); return C; } vector\u003cint\u003e polyMul(const vector\u003cint\u003e \u0026a, const vector\u003cint\u003e \u0026b, const vector\u003cint\u003e \u0026bm_seq) { int n = a.size() + b.size() - 1; int L = bm_seq.size() - 1; vector\u003cint\u003e res(n); for (int i = 0; i \u003c a.size(); ++i) { for (int j = 0; j \u003c b.size(); ++j) { res[i + j] = inc(res[i + j], mul(a[i], b[j])); } } for (int i = res.size() - 1; i \u003e= L; --i) { if (!res[i]) continue; for (int j = 1; j \u003c= L; ++j) { res[i - j] = dec(res[i - j], mul(bm_seq[j], res[i])); } } res.resize(min\u003cint\u003e(L, res.size())); return res; } vector\u003cint\u003e polyQpow(ll b, const vector\u003cint\u003e \u0026bm_seq) { vector\u003cint\u003e res = {1}, a = {0, 1}; while (b) { if (b \u0026 1) res = polyMul(res, a, bm_seq); a = polyMul(a, a, bm_seq); b \u003e\u003e= 1; } return res; } void solve() { int n, m; cin \u003e\u003e n \u003e\u003e m; if (n == 1) { cout \u003c\u003c mul(3, qpow(2, m - 1) ) \u003c\u003c \"\\n\"; return; } int k = 1 \u003c\u003c (n - 2); Matrix trans(k); for (int s = 0; s \u003c k; ++s) { vector\u003cint\u003e sa(n); sa[0] = 0; sa[1] = 1; for (int i = 2; i \u003c n; ++i) { sa[i] = (s \u003e\u003e i - 2 \u0026 1) ? sa[i - 2] : 3 - sa[i - 1] - sa[i - 2]; } for (int x = 0; x \u003c 3; ++x) for (int y = 0; y \u003c 3; ++y) for (int t = 0; t \u003c k; ++t) { if (x == y) continue; vector\u003cint\u003e ta(n); ta[0] = x; ta[1] = y; for (int i = 2; i \u003c n; ++i) { ta[i] = (t \u003e\u003e i - 2 \u0026 1) ? ta[i - 2] : 3 - ta[i - 1] - ta[i - 2]; } bool flag = 1; for (int i = 0; i \u003c n; ++i) { if (ta[i] == sa[i]) { flag = 0; break; } } trans.c[s][t] += flag; } } int lim = min(128 * 2, m); vector\u003cint\u003e ans(k, 6); vector\u003cint\u003e seq(lim); for (int i = 0; i \u003c lim; ++i) { for (int j = 0; j \u003c k; ++j) seq[i] = inc(seq[i], ans[j]); if (i == lim - 1) break; ans = ans * trans; } if (m - 1 \u003c lim) { cout \u003c\u003c seq[m - 1] \u003c\u003c \"\\n\"; return; } vector\u003cint\u003e bm_seq = bm(seq); vector\u003cint\u003e R = polyQpow(m - 1, bm_seq); int result = 0; for (int i = 0; i \u003c R.size(); ++i) { result = inc(result, mul(R[i], seq[i])); } cout \u003c\u003c result \u003c\u003c \"\\n\"; } int main(){ ios::sync_with_stdio(false); cin.tie(0); #ifdef LOCAL freopen(\"a.in\", \"r\", stdin); freopen(\"a.out\", \"w\", stdout); #endif int T = 1; // cin \u003e\u003e T; while (T--) { solve(); } return 0; } 评论区测试 看看下面的评论区吧。\n",
+  "wordCount" : "948",
+  "inLanguage": "en",
+  "datePublished": "2026-07-27T14:46:04+08:00",
+  "dateModified": "2026-07-27T14:46:04+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://cbdsopa.github.io/my-blog/posts/test-post/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "cbdsopa's blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://cbdsopa.github.io/my-blog/favicon.svg"
+    }
+  }
+}
+</script>
 </head>
 <body id="top">
     
@@ -605,7 +684,7 @@ int main(){
 </span></span></span><span class="line"><span class="cl">	<span class="n">freopen</span><span class="p">(</span><span class="s">&#34;a.in&#34;</span><span class="p">,</span> <span class="s">&#34;r&#34;</span><span class="p">,</span> <span class="n">stdin</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">freopen</span><span class="p">(</span><span class="s">&#34;a.out&#34;</span><span class="p">,</span> <span class="s">&#34;w&#34;</span><span class="p">,</span> <span class="n">stdout</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="cp">#endif
-</span></span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">T</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> 
+</span></span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">T</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>  
 </span></span><span class="line"><span class="cl">	<span class="c1">// cin &gt;&gt; T;
 </span></span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="p">(</span><span class="n">T</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">	    <span class="n">solve</span><span class="p">();</span>
@@ -613,13 +692,21 @@ int main(){
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><h1 id="评论区测试">评论区测试<a hidden class="anchor" aria-hidden="true" href="#评论区测试">#</a></h1>
+<p>看看下面的评论区吧。</p>
 
 
     </div>
 
+    <div class="post-print">
+      <button onclick="window.print()" title="导出为 PDF">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        导出PDF
+      </button>
+    </div>
+
     <footer class="post-footer">
       <ul class="post-tags">
-        <li><a href="http://localhost:1313/my-blog/tags/%E6%B5%8B%E8%AF%95/">测试</a></li>
+        <li><a href="https://cbdsopa.github.io/my-blog/tags/%E6%B5%8B%E8%AF%95/">测试</a></li>
       </ul>
     </footer><script src="https://giscus.app/client.js"
         data-repo="cbdsopa/my-blog"
@@ -676,7 +763,7 @@ int main(){
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/my-blog/">cbdsopa&#39;s blog</a></span> · 
+        <span>&copy; 2026 <a href="https://cbdsopa.github.io/my-blog/">cbdsopa&#39;s blog</a></span> · 
 
     <span>
         Powered by

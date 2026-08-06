@@ -744,3 +744,140 @@ html[data-theme="dark"] .intro-panel {
     transform: translateY(0);
     transition: transform 0.38s cubic-bezier(0.76, 0, 0.24, 1);
 }
+
+/* ========================================= */
+/* 导出 PDF 按钮                               */
+/* ========================================= */
+
+.post-print {
+    text-align: right;
+    margin-bottom: 16px;
+}
+
+.post-print button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    font-size: 14px;
+    color: var(--secondary);
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: color 0.2s, background 0.2s;
+}
+
+.post-print button:hover {
+    color: var(--primary);
+    background: var(--border);
+}
+
+/* ========================================= */
+/* 打印样式：隐藏无关元素，只留正文              */
+/* ========================================= */
+
+@media print {
+    @page {
+        margin: 1.5cm;
+    }
+
+    header.header,
+    #menu,
+    .logo-switches,
+    nav,
+    .toc-sidebar,
+    .post-print,
+    .post-footer,
+    footer.footer,
+    #top-link,
+    .copy-code,
+    .code-fold-btn,
+    .anchor,
+    #curtain,
+    #intro-overlay,
+    .intro-panel,
+    .intro-circle-wrap,
+    .intro-slash-line {
+        display: none !important;
+    }
+
+    body {
+        background: #fff !important;
+        color: #000 !important;
+        font-size: 11pt;
+        line-height: 1.5;
+    }
+
+    .main {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .post-single {
+        background: transparent !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .post-content {
+        font-size: 11pt !important;
+    }
+
+    .post-content pre,
+    .post-content pre.chroma {
+        background: #f8f8f8 !important;
+        color: #1a1a1a !important;
+        border: 1px solid #ddd !important;
+        page-break-inside: avoid;
+    }
+
+    .post-content pre.chroma .k,
+    .post-content pre.chroma .kc,
+    .post-content pre.chroma .kd,
+    .post-content pre.chroma .kn,
+    .post-content pre.chroma .kp,
+    .post-content pre.chroma .kr,
+    .post-content pre.chroma .nt,
+    .post-content pre.chroma .nf,
+    .post-content pre.chroma .fm,
+    .post-content pre.chroma .nc,
+    .post-content pre.chroma .no,
+    .post-content .chroma .s,
+    .post-content .chroma .s1,
+    .post-content .chroma .s2,
+    .post-content .chroma .m,
+    .post-content .chroma .mi,
+    .post-content .chroma .mf,
+    .post-content .chroma .c,
+    .post-content .chroma .c1,
+    .post-content .chroma .ch {
+        color: #1a1a1a !important;
+    }
+
+    .post-content .chroma .c,
+    .post-content .chroma .c1,
+    .post-content .chroma .ch {
+        font-style: italic !important;
+        color: #888 !important;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+        break-after: avoid;
+        margin: 12pt 0 6pt !important;
+    }
+
+    p {
+        margin: 4pt 0 !important;
+    }
+
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+}
