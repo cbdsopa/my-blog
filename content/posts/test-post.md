@@ -249,7 +249,7 @@ int main(){
 	freopen("a.in", "r", stdin);
 	freopen("a.out", "w", stdout);
 #endif
-	int T = 1; 
+	int T = 1;  
 	// cin >> T;
 	while (T--) {
 	    solve();
