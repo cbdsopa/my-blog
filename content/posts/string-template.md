@@ -3,7 +3,7 @@ date = '2026-08-17T02:44:17+08:00'
 draft = false
 title = '算法竞赛字符串性质与模板'
 categories = ["字符串"]
-tags = ["Hash", "KMP", "Z函数", "Manacher", "AC自动机", "后缀数组", "后缀自动机", "回文自动机", "最小表示法", "Lyndon分解", "Runs"]
+tags = ["Hash", "KMP", "Z函数", "Manacher", "AC自动机", "后缀数组", "后缀自动机", "回文自动机", "最小表示法", "Lyndon", "Runs"]
 +++
 
 # 字符串
