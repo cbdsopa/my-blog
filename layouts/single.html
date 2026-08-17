@@ -28,6 +28,7 @@
       {{- if not (.Param "hideMeta") }}
       <div class="post-meta">
         {{- partial "post_meta.html" . -}}
+        <span class="post-readcount">&nbsp;·&nbsp;阅读量&nbsp;<span class="waline-pageview-count" data-path="{{ .RelPermalink }}"></span>&nbsp;次</span>
         {{- partial "translation_list.html" . -}}
         {{- partial "edit_post.html" . -}}
         {{- partial "post_canonical.html" . -}}

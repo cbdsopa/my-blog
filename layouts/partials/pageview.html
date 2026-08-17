@@ -1,0 +1,9 @@
+{{- with site.Params.waline.serverURL }}
+<script type="module">
+    import { pageviewCount } from 'https://cdn.jsdelivr.net/npm/@waline/client@3/dist/pageview.js';
+    pageviewCount({
+        serverURL: {{ . | jsonify | safeJS }},
+        path: window.location.pathname
+    });
+</script>
+{{- end }}

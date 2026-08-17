@@ -71,3 +71,7 @@ theme = "PaperMod"
     lineNos = false
     noClasses = false
 
+[params.waline]
+  # Waline 部署后的服务器地址，形如 https://your-waline.vercel.app
+  serverURL = "https://waline-riacynr3m-cbdsopas-projects.vercel.app"
+
