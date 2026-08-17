@@ -815,6 +815,10 @@ html[data-theme="dark"] .intro-panel {
         padding: 0 !important;
     }
 
+    .post-wrapper {
+        display: block !important;
+    }
+
     .post-single {
         background: transparent !important;
         box-shadow: none !important;
@@ -832,7 +836,17 @@ html[data-theme="dark"] .intro-panel {
         background: #f8f8f8 !important;
         color: #1a1a1a !important;
         border: 1px solid #ddd !important;
-        page-break-inside: avoid;
+        page-break-inside: auto;
+        break-inside: auto;
+    }
+
+    .post-content pre,
+    .post-content pre code,
+    .post-content pre.chroma,
+    .post-content pre.chroma code {
+        white-space: pre-wrap !important;
+        word-break: break-word !important;
+        overflow-x: visible !important;
     }
 
     .post-content pre.chroma .k,
