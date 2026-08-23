@@ -1,11 +1,3 @@
-+++
-date = '2026-08-17T02:44:17+08:00'
-draft = false
-title = '算法竞赛字符串性质与模板'
-categories = ["字符串"]
-tags = ["Hash", "KMP", "Z函数", "Manacher", "AC自动机", "后缀数组", "后缀自动机", "回文自动机", "最小表示法", "Lyndon", "Runs"]
-+++
-
 # 字符串
 
 ## hash
@@ -357,9 +349,7 @@ endpos 集合相同的点，我们认为他们等价。后缀自动机上一个�
 
 > **性质4.** 点数最多 $2n - 1$，边数最多 $3n - 4$。
 
-> **性质5.** 只有 link 树的叶子的 endpos 个数为 1，其他为 0。
-
-如果需要统计等价类出现次数，只需统计子树内 endpos 个数即可。也就是叶子个数。
+> **性质5.** 每一个非克隆状态给出一个独有的 endpos，也就是每个前缀新建的点提供一个对应的 endpos，而其他的点不给出新的 endpos。
 
 > **性质6.** link树内，一个点的 len 等于子树的所有 endpos 最长公共后缀长度。
 
@@ -606,6 +596,8 @@ Lyndon 分解指将串分为多个 Lyndon 串，且字典序非严格单调降�
 > **性质5.** Lyndon 串可以被分为小 Lyndon 串按字典序严格单调增拼接。
 
 > **性质6.** 若字符串 $s$ 和字符 $\overline x$ 满足 $s\overline x$ 是某个 Lyndon 串的前缀，则对于 $\overline y > \overline x$，$s\overline y$ 是 Ly。
+
+> **性质7.** 一个 Lyndon 串无法被分为两个 $< s$ 的子序列。
 
 如果一个串 $t=w^k\overline{w}$，其中 $w$ 为 Lyndon 串，$\overline{w}$ 是 $w$ 的严格前缀，那么称 $t$ 为近似 Lyndon 串。
 
