@@ -429,17 +429,17 @@ $$\sum_{n = 0}^{\infty} \frac{x^n}{n!} = e^x$$
 
 两个代表标号组件的指数型生成函数当成 $OGF$ 相乘会自动完成标号分配。
 
-$$\^F(x)\^G(x) = \sum_{n = 0}^{\infty} \left [ \sum_{i = 0} ^ n \binom{n}{i} F_iG_{n -i} \right ] \frac{x^n}{n!}$$
+$$\hat{F}(x)\hat{G}(x) = \sum_{n = 0}^{\infty} \left [ \sum_{i = 0} ^ n \binom{n}{i} F_iG_{n -i} \right ] \frac{x^n}{n!}$$
 
 就是总共 $n$ 个标号，我选出 $i$ 个标号给到组件 $F_i$，剩下的给到组件 $G_{n-i}$。
 
 ##### 幂次
 
-多个相同的组件组合。 $\^F^k(x)$ 相当于把 $n$ 个标号，分配给 $k$ 个有顺序的区别的相同类型的组件。
+多个相同的组件组合。 $\hat{F}^k(x)$ 相当于把 $n$ 个标号，分配给 $k$ 个有顺序的区别的相同类型的组件。
 
 ##### exp
 
-$$\exp(F(x)) = \sum_{k = 0}^{\infty} \frac{\^F^k(x)}{k!}$$
+$$\exp{(F(x))} = \sum_{k = 0}^{\infty} \frac{\hat{F}^k(x)}{k!}$$
 
 正好把组件直接的顺序去掉了。
 
