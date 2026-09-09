@@ -89,3 +89,19 @@ void divide(ll p) {
 	divide(p / q); divide(q);
 }
 ```
+
+
+## 多维 vector
+
+```cpp
+template<typename T>
+auto make_vector(int n, T val) {
+	return vector<T>(n, val);
+}
+template<typename... Args>
+auto make_vector(int n, Args... args) {
+	auto val = make_vector(args...);
+	return vector<decltype(val)>(n, val);
+}
+
+```
