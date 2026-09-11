@@ -723,8 +723,8 @@ $$
 
 对于 $n$ 长全序序列 $\{x_i\}$ ，$S=\{1,2,...,n\}$，有：
 $$
-\max_{i\in S}{}_k x_i=\sum_{T\subseteq S}(-1)^{|T|-k}\binom{|T|-1}{k-1}\min_{j\subseteq T} x_j\\
-\min_{i\in S}{}_kx_i=\sum_{T\subseteq S}(-1)^{|T|-k}\binom{|T|-1}{k-1}\max_{j\subseteq T} x_j
+\text{kth}\max_{i\in S}{x_i} =\sum_{T\subseteq S}(-1)^{|T|-k}\binom{|T|-1}{k-1}\min_{j\subseteq T} x_j\\
+\text{kth}\min_{i\in S}{x_i}=\sum_{T\subseteq S}(-1)^{|T|-k}\binom{|T|-1}{k-1}\max_{j\subseteq T} x_j
 $$
 
 #### 单位根反演
