@@ -3,7 +3,7 @@ date = '2026-09-05T19:13:40+08:00'
 draft = false
 title = '算法竞赛数学公式与模板'
 categories = ["数学"]
-tags = ["多项式", "NTT", "FWT", "拉格朗日插值", "拉格朗日反演", "Berlekamp-Massey", "生成函数", "卡特兰数", "斐波那契", "欧拉数", "Polya计数"]
+tags = ["多项式", "NTT", "FWT", "拉格朗日插值", "拉格朗日反演", "Berlekamp-Massey", "生成函数", "卡特兰数", "斐波那契", "欧拉数", "Polya计数", "牛顿迭代", "伯努利数", "分拆数", "数论"]
 +++
 
 # 数学
@@ -449,9 +449,17 @@ $$\exp{(F(x))} = \sum_{k = 0}^{\infty} \frac{\hat{F}^k(x)}{k!}$$
 
 积分：加入一个元素。
 
+### ！！！概率生成函数
+
+
+
+### ！！！狄利克雷生成函数
+
+
+
 ## 组合
 
-### 特殊数列
+### 特殊数
 
 #### 斐波那契
 
@@ -516,7 +524,7 @@ $\left\langle \begin{matrix} n \\ m \end{matrix} \right\rangle$ 为欧拉数（E
 
 $$\left\langle \begin{matrix} n \\ m \end{matrix} \right\rangle = m \left\langle \begin{matrix} n - 1 \\ m \end{matrix} \right\rangle + (n - m + 1) \left\langle \begin{matrix} n - 1 \\ m - 1 \end{matrix} \right\rangle$$
 
-##### i 的 k 次幂求和
+##### 自然数幂和
 
 $$
 \sum_{i=1}^n i^2=\frac{n(n+1)(2n+1)}{6}
@@ -529,15 +537,231 @@ $$
 
 #### 伯努利数
 
+研究自然数幂和多项式的系数。
 
+已知 $\{1, c, c^2, ...\}$ 的 EGF 为 $G_c(x) = e^{cx}$，那我们通过这个构造自然数幂和的 EGF。
+
+$$S_n(x) = \sum_{c = 0}^{n - 1} G_c(x) = \frac{1 - e^{nx}}{1 - e^x}$$
+
+这个东西的意义是，第 $i$ 项系数是前 $n$ 个数的每个幂 $i$ 下的和。
+
+分离出伯努利数的 EGF，$B(x) = \frac{x}{e^x - 1}$，则：
+
+$$S_n(x) = B(x) \frac{e^{nx} - 1}{x}$$
+
+令：
+
+$$G_n(x) = \frac{e^{nx} - 1}{x} = \sum_{i = 0}^{\infty} \frac{n^{i + 1}}{(i + 1)!}x^i$$
+
+
+所以有：
+
+$$\sum_{i = 0} ^ {n - 1}i^k = [\frac{x^k}{k!}]S_n(x) = k!\sum_{i + j = k} [x^i]B(x) [x^j]G_n(x) = k!\sum_{i = 0}^k\frac{(n + 1)^i}{(i + 1)!}B_{k - i}$$
+
+对于伯努利数，直接多项式求逆求解即可 $B(x) = \frac{x}{e^x - 1}$。
 
 #### 分拆数
 
+正整数拆分的方案数。
 
+$$P(x) = \prod_{k = 1}^{\infty} \sum_{i = 0}^{\infty} x^{ik} = \prod_{k = 1}^{\infty} \frac{1}{1 - x^k}$$
+
+也就是先枚举每个数，然后枚举选几次。
+
+乘法的直接取 $Ln$ 然后再 $Exp$ 回去。
+
+$$P(x) = \prod_{k = 1}^{\infty}  \frac{1}{1 - x^k} = \exp\sum_{k = 1} ^{\infty} \ln\frac{1}{1 - x^k} = \exp\sum_{k = 1} ^{\infty} \sum_{i = 1}^{\infty} \frac{x^{ik}}{i}$$
+
+### 斯特林数
+
+#### 第一类斯特林数
+
+##### 定义
+
+$$\begin{bmatrix} n \\ k \end{bmatrix}$$
+
+$n$ 个不同元素分为 $k$ 个互不区分的非空轮换的方案数。
+
+##### 递推公式
+
+$$\begin{bmatrix} n \\ k \end{bmatrix} = \begin{bmatrix} n - 1 \\ k - 1 \end{bmatrix} + (n - 1)\begin{bmatrix} n - 1 \\ k \end{bmatrix}$$
+
+##### 同行计算
+
+根据递推公式，我们需要求这样的一个多项式：
+
+$$\prod_{i = 1}^n(x + i - 1)$$
+
+分治 NTT 即可。
+
+同行和：
+
+$$\sum_{i =0}^n\begin{bmatrix} n \\ i \end{bmatrix} = n!$$
+
+##### 同列计算
+
+给出 EGF：
+
+$$\frac{1}{k!}(- \ln(1 - x))^k$$
+
+#### 第二类斯特林数
+
+##### 定义
+
+$$\begin{Bmatrix} n \\ k \end{Bmatrix}$$
+
+$n$ 个不同元素分为 $k$ 个互不区分的非空集合的方案数。
+
+##### 递推公式
+
+$$\begin{Bmatrix} n \\ k \end{Bmatrix} = \begin{Bmatrix} n - 1 \\ k - 1 \end{Bmatrix} + k\begin{Bmatrix} n - 1 \\ k \end{Bmatrix}$$
+
+##### 通项公式
+
+$$
+\begin{Bmatrix} n \\ k \end{Bmatrix}=\sum_{i=0}^k\frac{(-1)^{k-i}i^n}{i!(k-i)!}
+$$
+
+##### 同行计算
+
+发现是一个卷积的形式，$f(x)=\sum_{i=0}^n\frac{(-1)^i}{i!}x^i$ 卷积 $g(x)=\sum_{i=0}^n\frac{i^n}{i!}$ 即可 $O(n\log n)$ 的时间内求出。
+
+同行和，其中 $B_n$ 为贝尔数：
+
+$$\sum_{i =0}^n\begin{Bmatrix} n \\ i \end{Bmatrix} = B_n$$
+
+##### 同列计算
+
+给出 EGF：
+
+$$\frac{1}{k!}(e^x - 1)^k$$
+
+同时，这个 $e^x - 1$ 的 exp 是贝尔数的生成函数。
 
 ### 组合恒等式与反演
 
+#### 上升幂与下降幂
 
+##### 上升幂-普通幂
+
+$$
+x^{\overline{n}}=\sum_{i=0}^n\begin{bmatrix} n \\ i \end{bmatrix}x^i
+$$
+
+$$
+x^n=\sum_{i=0}^n\begin{Bmatrix} n \\ i \end{Bmatrix}(-1)^{n-i}x^{\overline i}
+$$
+
+##### 下降幂-普通幂
+
+$$
+x^{\underline n}=\sum_{i=0}^n\begin{bmatrix} n \\ k \end{bmatrix} (-1)^{n-i}x^i
+$$
+
+$$
+x^n=\sum_{i=0}^n\begin{Bmatrix} n \\ i \end{Bmatrix}x^{\underline i}
+$$
+
+##### 牛顿（下降幂）多项式系数与点值表示
+
+假设有：
+
+$$f(x) = \sum_{i = 0}^{n} b_i x^{\underline i}$$
+
+和一组点值：
+
+$$(i, a_i), i \in [0, n]$$
+
+则：
+
+$$\frac{a_k}{k!} = \sum_{i = 0}^k\frac{b_i}{(k - i)!}$$
+
+卷积可以完成插值。
+
+#### 二项式反演和斯特林反演
+
+##### 二项式反演
+
+$$
+f(n)=\sum_{i=0}^n\binom{n}{i}g(i)\Leftrightarrow g(n)=\sum_{i=0}^n(-1)^{n-i}\binom{n}{i}f(i)
+$$
+
+
+$$
+f(n)=\sum_{i=0}^n(-1)^i\binom{n}{i}g(i)\Leftrightarrow g(n)=\sum_{i=0}^n(-1)^i\binom{n}{i}f(i)
+$$
+
+对于其 EGF，有：
+
+$$f * e^x = g, g * e^{-x} = f$$
+
+##### 斯特林反演
+
+下式的一二类斯特林和 $-1$ 可以任意交换。
+
+$$
+f(n)=\sum_{i=0}^n\begin{Bmatrix} n \\ i \end{Bmatrix}g(i)\Leftrightarrow g(N)=\sum_{i=0}^n(-1)^{n-i}\begin{bmatrix} n \\ i \end{bmatrix}f(i)
+$$
+
+
+$$
+f(n)=\sum_{i=0}^n(-1)^i\begin{Bmatrix} n \\ i \end{Bmatrix}g(i)\Leftrightarrow g(N)=\sum_{i=0}^n(-1)^{i}\begin{bmatrix} n \\ i \end{bmatrix}f(i)
+$$
+
+##### 反转公式
+
+$$
+\sum_{i=m}^n(-1)^{n-i}\begin{Bmatrix} n \\ i \end{Bmatrix}\begin{bmatrix} i \\ m \end{bmatrix}=[m=n]\tag{1} 
+$$
+$$
+\sum_{i=m}^n(-1)^{m-i}\begin{bmatrix} n \\ i \end{bmatrix}\begin{Bmatrix} i \\ m \end{Bmatrix}=[m=n]\tag{2}
+$$
+
+互为反演的都有上述类似形式的性质。
+
+#### min-max 容斥
+
+对于 $n$ 长全序序列 $\{x_i\}$ ，$S=\{1,2,...,n\}$，有：
+$$
+\max_{i\in S}{}_k x_i=\sum_{T\subseteq S}(-1)^{|T|-k}\binom{|T|-1}{k-1}\min_{j\subseteq T} x_j\\
+\min_{i\in S}{}_kx_i=\sum_{T\subseteq S}(-1)^{|T|-k}\binom{|T|-1}{k-1}\max_{j\subseteq T} x_j
+$$
+
+#### 单位根反演
+
+$$[n | a] = \frac{1}{n} \sum_{i = 0}^{n - 1} w_n^{ia}$$
+
+#### 二项式恒等式
+
+##### 插板法
+
+$n$ 个相同元素分为 $k$ 个有区别的非空集合的方案数为 $\binom{n - 1}{k - 1}$。
+
+##### 乘式
+
+$$\binom{n}{r}\binom{r}{k} = \binom{n}{k}\binom{n - k}{r - k}$$
+
+##### 上指标反转
+
+$$\binom{r}{k} = (-1)^k \binom{k - r - 1}{k} $$
+
+##### 变上项求和
+
+$$\sum_{l = 0}^n\binom{l}{k} = \binom{n + 1}{k + 1}$$
+
+##### 范德蒙德卷积
+
+$$\sum_{k = 0}^{r}\binom{m}{k}\binom{n}{r - k} = \binom{n + m}{r}$$
+
+变式，只要能弄出底下和为定值，上面两个定值就可以直接套。
+
+$$\sum_{k = 0}^r\binom{k}{a}\binom{r - k}{b} = \binom{r + 1}{a + b + 1}$$
+
+变式，只要能弄出上面和为定值，底下两个定值就可以直接套。
+
+##### 斐波那契恒等式
+
+$$\sum_{i = 0}^{n} \binom{n - i}{i} = F_{n + 1}$$
 
 ### polya 计数
 
@@ -566,4 +790,8 @@ $$
 $$
 
 ## 数论
+
+
+
+## 线性代数
 
