@@ -39,7 +39,7 @@ namespace Poly {
 	}
 	void get_inv(int n) {
 		if (n < inv.size()) return; 
-		int last = inv.size();
+		int last = max<int>(2, inv.size());
 		inv.resize(n + 1);
 		inv[1] = 1;
 		for(int i = last; i <= n; ++i) {
