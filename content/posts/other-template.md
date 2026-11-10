@@ -105,3 +105,33 @@ auto make_vector(int n, Args... args) {
 }
 
 ```
+
+## 对拍
+
+```python
+import os
+import subprocess
+
+os.system("g++ std.cpp -o std.exe")
+os.system("g++ my.cpp -o my.exe")
+
+for i in range(0, 1000):
+    os.system("python gen.py > in.txt")
+    os.system("std.exe < in.txt > ans.txt")
+    
+    try:
+        with open("in.txt", "r") as fin, open("out.txt", "w") as fout:
+            subprocess.run("my.exe", stdin=fin, stdout=fout, timeout=2.0, check=True)
+    except subprocess.TimeoutExpired:
+        print(f"Test {i}: TLE (超时)!")
+        break
+    except subprocess.CalledProcessError:
+        print(f"Test {i}: RE (崩溃)!")
+        break
+        
+    if os.system("fc ans.txt out.txt > nul") != 0:
+        print(f"Test {i}: WA (答案错误)!")
+        break
+    
+    print(f"Test {i}: AC")
+```
