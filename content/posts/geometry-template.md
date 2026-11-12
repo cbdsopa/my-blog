@@ -342,7 +342,8 @@ void minkowsik(const vector<vec> &s1, const vector<vec> &s2, vector<vec> &t) {
 	for(int i = 0; i < m; ++i) d2[i] = s2[(i + 1) % m] - s2[i];
 	int p1 = 0, p2 = 0;
 	while(p1 < n && p2 < m) {
-		t.push_back(t.back() + (d1[p1] * d2[p2] >= 0 ? d1[p1++] : d2[p2++]) );
+		if (d1[p1] * d2[p2] == 0) t.push_back(t.back() + d1[p1++] + d2[p2++]);
+		else t.push_back(t.back() + (d1[p1] * d2[p2] > 0 ? d1[p1++] : d2[p2++]));
 	}
 	while(p1 < n) t.push_back(t.back() + d1[p1++]);
 	while(p2 < m) t.push_back(t.back() + d2[p2++]);
