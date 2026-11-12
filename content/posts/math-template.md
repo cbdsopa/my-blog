@@ -1001,7 +1001,7 @@ $(\mathbf Z/2\mathbf Z)^{\times}\cong C_1$，$(\mathbf Z/2^2\mathbf Z)^{\times}\
 
 当 $n = 1, 2, 4, p^k, 2p^k$ 时，没有子群 $C_2\times C_2$ ，此时为循环群，存在原根。
 
-## ！数论
+## 数论
 
 ### 素性测试和 Pollard-rho
 

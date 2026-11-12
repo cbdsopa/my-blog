@@ -328,11 +328,26 @@ void get_convex(vector<vec> &s) {
 
 ### 闵可夫斯基和
 
+要求向量都是半平面，也就是 Graham 得到的凸包。（以最小坐标点为基）
+
 多边形 $S, T$ 内部所有点相加得到的新多边形。
 
 当为凸包相加时，等价为所有边加在一起极角排序，可以采用归并排序合并。
 
 ```cpp
+void rotate_to_ymin(vector<vec> &s) {
+	int n = s.size();
+	int p = 0;
+	for (int i = 1; i < n; ++i) {
+		if (s[i].y < s[p].y || (s[i].y == s[p].y && s[i].x < s[p].x)) 
+			p = i;
+	}
+	vector<vec> t(n);
+	for (int i = 0; i < n; ++i, p = (p + 1) % n) {
+		t[i] = s[p];
+	}
+	s = t;
+}
 void minkowsik(const vector<vec> &s1, const vector<vec> &s2, vector<vec> &t) {
 	int n = s1.size(), m = s2.size();
 	t.clear();
